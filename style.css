@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.custom-header {
+  background-color: #e3e7e9;
+}
+
+.logo {
+  height: 60px;
+}
+
+.main-menu {
+  gap: 20px;
+}
+
+.main-menu .nav-link {
+  color: #2b3c3f;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.3s;
+}
+
+.main-menu .nav-link:hover,
+.main-menu .nav-link.active {
+  color: #0136a8;
+}
+
+.main-menu .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 4px;
+  background-color: #0136a8;
+  border-radius: 6px;
+}
+
+/* Personalização do dropdown da navbar */
+.custom-dropdown {
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown .dropdown-item {
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #2b3c3f;
+  white-space: normal;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #00cc88;
+}
+
+/* Dropdown visível com hover (desktop) */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+.custom-offcanvas {
+  background-color: #012643;
+  color: white;
+  width: 80%;
+}
+
+.custom-offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-offcanvas .menu-links .nav-link {
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  border-right: 3px solid transparent;
+  transition: background 0.3s, border-right 0.3s;
+}
+
+.custom-offcanvas .menu-links .nav-link:hover {
+  background-color: rgb(113, 115, 116);
+  border-right: 3px solid #18181A;
+}
+
+.social-footer i {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.social-footer i:hover {
+  color: #18181A;
+}
+
+.btn-accessibility:hover {
+    background-color: rgb(113, 115, 116);
+    border-color: rgb(113, 115, 116);
+    color: #ffffff;
+}
+
+/* Estilos gerais continuam os mesmos até aqui */
+
+@media (min-width: 768px) {
+  /* Layout horizontal em tablets */
+  .main-menu {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .custom-header {
+    padding: 1.5rem 0;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  /* Mostrar dropdown no hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  .nav-link::after {
+    display: none; /* remove setinha */
+  }
+
+  .nav-item.dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu.custom-dropdown {
+    margin-top: 0.5rem;
+    background-color: white;
+  }
+}
