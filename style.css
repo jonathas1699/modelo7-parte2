@@ -10,7 +10,16 @@ body {
 
 .logo {
   height: 60px;
+  max-width: 100%;
 }
+
+/* Logo mais pra esquerda */
+@media (min-width: 992px) {
+  .logo-ajuste {
+    margin-left: -20px; 
+  }
+}
+
 
 .main-menu {
   gap: 20px;
@@ -138,5 +147,9 @@ body {
   }
 }
 
-
+/* Puxa um pouco pra esquerda */
+.dropEsquerda {
+  left: -80000px; /* ajuste fino — pode ser -5px, -15px, etc */
+  transform: translateX(-100px);
+}
 
