@@ -42,12 +42,13 @@ body {
   border-radius: 6px;
 }
 
-/* Personalização do dropdown da navbar */
+/* Dropdown personalizado */
 .custom-dropdown {
   width: 300px;
   border-radius: 10px;
   padding: 10px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* escondido por padrão */
 }
 
 .custom-dropdown .dropdown-item {
@@ -60,14 +61,6 @@ body {
 .custom-dropdown .dropdown-item:hover {
   background-color: #f1f1f1;
   color: #00cc88;
-}
-
-/* Dropdown visível com hover (desktop) */
-@media (min-width: 992px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0.5rem;
-  }
 }
 
 .custom-offcanvas {
@@ -103,15 +96,13 @@ body {
 }
 
 .btn-accessibility:hover {
-    background-color: rgb(113, 115, 116);
-    border-color: rgb(113, 115, 116);
-    color: #ffffff;
+  background-color: rgb(113, 115, 116);
+  border-color: rgb(113, 115, 116);
+  color: #ffffff;
 }
 
-/* Estilos gerais continuam os mesmos até aqui */
-
+/* Responsivo tablet */
 @media (min-width: 768px) {
-  /* Layout horizontal em tablets */
   .main-menu {
     flex-direction: row !important;
     justify-content: center;
@@ -125,30 +116,24 @@ body {
   .logo {
     height: 70px;
   }
+}
 
-  /* Mostrar dropdown no hover */
+/* Hover dropdown no desktop */
+@media (min-width: 992px) {
+  .nav-item.dropdown {
+    position: relative;
+  }
+
   .nav-item.dropdown:hover .dropdown-menu {
     display: block;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
-  }
-
-  .dropdown-menu {
-    display: none;
+    background-color: white;
   }
 
   .nav-link::after {
-    display: none; /* remove setinha */
-  }
-
-  .nav-item.dropdown {
-    position: relative;
-  }
-
-  .dropdown-menu.custom-dropdown {
-    margin-top: 0.5rem;
-    background-color: white;
+    display: none;
   }
 }
