@@ -60,7 +60,7 @@ body {
 
 .custom-dropdown .dropdown-item:hover {
   background-color: #f1f1f1;
-  color: #00cc88;
+  color: #0136a8;
 }
 
 .custom-offcanvas {
@@ -137,3 +137,6 @@ body {
     display: none;
   }
 }
+
+
+
