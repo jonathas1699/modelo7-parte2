@@ -153,3 +153,18 @@ body {
   transform: translateX(-100px);
 }
 
+
+/* Esconde o submenu de secretarias por padrão */
+.submenu-secretarias {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 225px;
+  z-index: 1000;
+}
+
+/* Mostra apenas quando passa o mouse no item pai */
+.dropend:hover > .submenu-secretarias {
+  display: block;
+}

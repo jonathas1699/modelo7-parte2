@@ -41,21 +41,46 @@
       </div>
 
 
+        <a class="nav-link" href="#">Serviços</a>
 
 
-
-      <!-- Dropdown Desktop -->
+      <!-- Dropdown Publicações -->
       <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="secretariasDropdown">Secretarias</a>
-        <ul class="dropdown-menu custom-dropdown" aria-labelledby="secretariasDropdown">
-          <li><a class="dropdown-item" href="#">Educação</a></li>
-          <li><a class="dropdown-item" href="#">Saúde</a></li>
-          <li><a class="dropdown-item" href="#">Obras</a></li>
+        <a class="nav-link dropdown-toggle" href="#" id="publicacoesDropdown">Publicações</a>
+        <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="publicacoesDropdown">
+          <li><a class="dropdown-item" href="#">Diário Oficial</a></li>
+          <li><a class="dropdown-item" href="#">Manuais</a></li>
+          <li><a class="dropdown-item" href="#">Documentos</a></li>
+          <li><a class="dropdown-item" href="#">Concurso Público</a></li>
+          <li><a class="dropdown-item" href="#">Concessão de Diárias</a></li>
+          <li><a class="dropdown-item" href="#">Estoque de Medicamentos</a></li>
         </ul>
       </div>
 
-      <a class="nav-link" href="#">Serviços</a>
-      <a class="nav-link" href="#">Transparência</a>
+
+
+      <!-- Dropdown Publicações -->
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="aPrefeituraDropdown">A Prefeitura</a>
+        <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aPrefeituraDropdown">
+          <li><a class="dropdown-item" href="#">Prefeito</a></li>
+          <li><a class="dropdown-item" href="#">Vice-Prefeito</a></li>
+          <!-- Sub-dropdown em Secretarias -->
+          <li class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" id="secretariasDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+            Secretarias <i class="bi bi-caret-end-fill ms-1"></i>
+            </a>
+            <ul class="dropdown-menu submenu-secretarias" aria-labelledby="secretariasDropdown">
+            <li><a class="dropdown-item" href="#">Gabinete do Prefeito</a></li>
+            <li><a class="dropdown-item" href="#">Secretaria de</a></li>
+            <li><a class="dropdown-item" href="#">Infraestrutura</a></li>
+      </ul>
+    </li>
+        </ul>
+      </div>
+
+      
+      
       <a class="nav-link" href="#">Notícias</a>
       <a class="nav-link" href="#">Agenda do Prefeito</a>
       <a class="nav-link" href="#">Ouvidoria</a>
