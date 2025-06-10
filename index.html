@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,114 +9,154 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header class="custom-header py-2">
-  <div class="container d-flex justify-content-between align-items-center">
-    <img src="imgs/logoMaxima.png" alt="Prefeitura de Goiânia" class="logo logo-ajuste" />
+  <header class="custom-header py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img src="imgs/logoMaxima.png" alt="Prefeitura de Goiânia" class="logo logo-ajuste" />
 
-    <!-- Ícones mobile -->
-    <div class="d-flex d-lg-none gap-3">
-      <button class="btn btn-link text-dark" aria-label="Buscar">
-        <i class="bi bi-search" style="font-size: 1.5rem;"></i>
-      </button>
-      <button class="btn btn-link text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
-        <i class="bi bi-list" style="font-size: 1.8rem;"></i>
-      </button>
-    </div>
-
-    <!-- Menu Desktop -->
-    <nav class="d-none d-lg-flex main-menu align-items-center">
-      
-      
-    <!-- Dropdown A Cidade -->  
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="aCidadeDropdown">A Cidade</a>
-        <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aCidadeDropdown">
-          <li><a class="dropdown-item" href="#">Bairros</a></li>
-          <li><a class="dropdown-item" href="#">Feriados Municipais</a></li>
-          <li><a class="dropdown-item" href="#">Hino Oficial</a></li>
-          <li><a class="dropdown-item" href="#">Símbolos</a></li>
-          <li><a class="dropdown-item" href="#">Notícias</a></li>
-        </ul>
+      <!-- Ícones mobile -->
+      <div class="d-flex d-lg-none gap-3">
+        <button class="btn btn-link text-dark" aria-label="Buscar">
+          <i class="bi bi-search" style="font-size: 1.5rem;"></i>
+        </button>
+        <button class="btn btn-link text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar">
+          <i class="bi bi-list" style="font-size: 1.8rem;"></i>
+        </button>
       </div>
+
+      <!-- Menu Desktop -->
+      <nav class="d-none d-lg-flex main-menu align-items-center">
+
+
+        <!-- Dropdown A Cidade -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aCidadeDropdown">A Cidade</a>
+          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aCidadeDropdown">
+            <li><a class="dropdown-item" href="#">Bairros</a></li>
+            <li><a class="dropdown-item" href="#">Feriados Municipais</a></li>
+            <li><a class="dropdown-item" href="#">Hino Oficial</a></li>
+            <li><a class="dropdown-item" href="#">Símbolos</a></li>
+            <li><a class="dropdown-item" href="#">Notícias</a></li>
+          </ul>
+        </div>
 
 
         <a class="nav-link" href="#">Serviços</a>
 
 
-      <!-- Dropdown Publicações -->
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="publicacoesDropdown">Publicações</a>
-        <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="publicacoesDropdown">
-          <li><a class="dropdown-item" href="#">Diário Oficial</a></li>
-          <li><a class="dropdown-item" href="#">Manuais</a></li>
-          <li><a class="dropdown-item" href="#">Documentos</a></li>
-          <li><a class="dropdown-item" href="#">Concurso Público</a></li>
-          <li><a class="dropdown-item" href="#">Concessão de Diárias</a></li>
-          <li><a class="dropdown-item" href="#">Estoque de Medicamentos</a></li>
-        </ul>
-      </div>
-
-
-
-      <!-- Dropdown Publicações -->
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="aPrefeituraDropdown">A Prefeitura</a>
-        <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aPrefeituraDropdown">
-          <li><a class="dropdown-item" href="#">Prefeito</a></li>
-          <li><a class="dropdown-item" href="#">Vice-Prefeito</a></li>
-          <!-- Sub-dropdown em Secretarias -->
-          <li class="dropend">
-            <a class="dropdown-item dropdown-toggle" href="#" id="secretariasDropdown" data-bs-toggle="dropdown" aria-expanded="true">
-            Secretarias <i class="bi bi-caret-end-fill ms-1"></i>
-            </a>
-            <ul class="dropdown-menu submenu-secretarias" aria-labelledby="secretariasDropdown">
-            <li><a class="dropdown-item" href="#">Gabinete do Prefeito</a></li>
-            <li><a class="dropdown-item" href="#">Secretaria de</a></li>
-            <li><a class="dropdown-item" href="#">Infraestrutura</a></li>
-      </ul>
-    </li>
-        </ul>
-      </div>
-
-      
-      
-      <a class="nav-link" href="#">Notícias</a>
-      <a class="nav-link" href="#">Agenda do Prefeito</a>
-      <a class="nav-link" href="#">Ouvidoria</a>
-    </nav>
-  </div>
-
-  <!-- Offcanvas Menu Mobile -->
-  <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
-    <div class="offcanvas-header">
-      <h1 class="offcanvas-title" id="mobileSidebarLabel">Menu</h1>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
-    </div>
-    <div class="offcanvas-body d-flex flex-column justify-content-between">
-      <ul class="nav flex-column menu-links">
-        <li class="nav-item"><a class="nav-link" href="#">A Cidade</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Publicações</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">A Prefeitura</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Legislação</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Links Úteis</a></li>
-      </ul>
-      <div class="social-footer mt-4 text-center">
-        <div class="mb-3">
-          <a href="#"><i class="bi bi-instagram fs-4 mx-2"></i></a>
-          <a href="#"><i class="bi bi-facebook fs-4 mx-2"></i></a>
-          <a href="#"><i class="bi bi-youtube fs-4 mx-2"></i></a>
+        <!-- Dropdown Publicações -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="publicacoesDropdown">Publicações</a>
+          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="publicacoesDropdown">
+            <li><a class="dropdown-item" href="#">Diário Oficial</a></li>
+            <li><a class="dropdown-item" href="#">Manuais</a></li>
+            <li><a class="dropdown-item" href="#">Documentos</a></li>
+            <li><a class="dropdown-item" href="#">Concurso Público</a></li>
+            <li><a class="dropdown-item" href="#">Concessão de Diárias</a></li>
+            <li><a class="dropdown-item" href="#">Estoque de Medicamentos</a></li>
+          </ul>
         </div>
-        <button class="btn btn-outline-light w-100 btn-accessibility">
-          <i class="bi bi-universal-access me-2"></i> Acessibilidade
-        </button>
+
+
+
+        <!-- Dropdown Publicações -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aPrefeituraDropdown">A Prefeitura</a>
+          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aPrefeituraDropdown">
+            <li><a class="dropdown-item" href="#">Prefeito</a></li>
+            <li><a class="dropdown-item" href="#">Vice-Prefeito</a></li>
+            <!-- Sub-dropdown em Secretarias -->
+            <li class="dropend">
+              <a class="dropdown-item dropdown-toggle" href="#" id="secretariasDropdown" data-bs-toggle="dropdown">
+                Secretarias <i class="bi bi-caret-end-fill ms-1"></i>
+              </a>
+              <ul class="dropdown-menu submenu-secretarias" aria-labelledby="secretariasDropdown">
+                <li><a class="dropdown-item" href="#">Gabinete do Prefeito</a></li>
+                <li><a class="dropdown-item" href="#">Secretaria de Admnistração social</a></li>
+                <li><a class="dropdown-item" href="#">Infraestrutura</a></li>
+              </ul>
+            <li class="dropend">
+              <a class="dropdown-item dropdown-toggle" href="#" id="orgaosDropdown" data-bs-toggle="dropdown">
+                Órgãos <i class="bi bi-caret-end-fill ms-1"></i>
+              </a>
+              <ul class="dropdown-menu submenu-orgaos" aria-labelledby="orgaosDropdown">
+                <li><a class="dropdown-item" href="#">SECOM</a></li>
+                <li><a class="dropdown-item" href="#">SEMOB</a></li>
+                <li><a class="dropdown-item" href="#">Procuradoria Jurídica</a></li>
+              </ul>
+            </li>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Dropdown Legislações -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="LegislacaoDropdown">Legislação</a>
+          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LegislacaoDropdown">
+            <li><a class="dropdown-item" href="#">Principais Legislações</a></li>
+            <li><a class="dropdown-item" href="#">Lei Orgânica</a></li>
+            <li><a class="dropdown-item" href="#">Leis Municipais</a></li>
+            <li><a class="dropdown-item" href="#">Medidas Provisórias</a></li>
+            <li><a class="dropdown-item" href="#">Vetos</a></li>
+            <li><a class="dropdown-item" href="#">Decretos</a></li>
+            <li><a class="dropdown-item" href="#">Portarias</a></li>
+          </ul>
+        </div>
+
+
+        <!-- Dropdown Links Úteis -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="LinksDropdown">Links Úteis</a>
+          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LinksDropdown">
+            <li><a class="dropdown-item" href="#">Plano Diretor de Guarabira</a></li>
+            <li><a class="dropdown-item" href="#">Portal Nacional de Contratações Públicas - PNCP</a></li>
+            <li><a class="dropdown-item" href="#">PLANO MUNICIAPL PELA PRIMEIRA INFÂNCIA - PMPI</a></li>
+            <li><a class="dropdown-item" href="#">Portal da Transparência</a></li>
+            <li><a class="dropdown-item" href="#">SISCONV</a></li>
+            <li><a class="dropdown-item" href="#">Relatório Estático</a></li>
+            <li><a class="dropdown-item" href="#">Proteção de Dados</a></li>
+          </ul>
+        </div>
+        
+      </nav>
+    </div>
+
+    <!-- Offcanvas Menu Mobile -->
+    <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mobileSidebar"
+      aria-labelledby="mobileSidebarLabel">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title" id="mobileSidebarLabel">Menu</h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          aria-label="Fechar"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <ul class="nav flex-column menu-links">
+          <li class="nav-item"><a class="nav-link" href="#">A Cidade</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Publicações</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">A Prefeitura</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Legislação</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Links Úteis</a></li>
+        </ul>
+        <div class="social-footer mt-4 text-center">
+          <div class="mb-3">
+            <a href="#"><i class="bi bi-instagram fs-4 mx-2"></i></a>
+            <a href="#"><i class="bi bi-facebook fs-4 mx-2"></i></a>
+            <a href="#"><i class="bi bi-youtube fs-4 mx-2"></i></a>
+          </div>
+          <button class="btn btn-outline-light w-100 btn-accessibility">
+            <i class="bi bi-universal-access me-2"></i> Acessibilidade
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

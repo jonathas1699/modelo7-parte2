@@ -129,11 +129,7 @@ body {
 
 /* Hover dropdown no desktop */
 @media (min-width: 992px) {
-  .nav-item.dropdown {
-    position: relative;
-  }
-
-  .nav-item.dropdown:hover .dropdown-menu {
+  .main-menu > .nav-item.dropdown:hover > .dropdown-menu {
     display: block;
     position: absolute;
     top: 100%;
@@ -141,20 +137,43 @@ body {
     z-index: 1000;
     background-color: white;
   }
+}
+
+
+/* ...existing code... */
+.submenu-orgaos {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 225px;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.dropend:hover > .submenu-orgaos,
+.dropend > .submenu-orgaos:hover {
+  display: block;
+}
+
 
   .nav-link::after {
     display: none;
   }
-}
+
 
 /* Puxa um pouco pra esquerda */
 .dropEsquerda {
-  left: -80000px; /* ajuste fino — pode ser -5px, -15px, etc */
-  transform: translateX(-100px);
+  left: auto;
+  right: 0; /* ou left: 0, dependendo de onde você quer alinhar */
 }
 
 
+
 /* Esconde o submenu de secretarias por padrão */
+/* ...existing code... */
 .submenu-secretarias {
   display: none;
   position: absolute;
@@ -162,9 +181,16 @@ body {
   left: 100%;
   min-width: 225px;
   z-index: 1000;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
+
 /* Mostra apenas quando passa o mouse no item pai */
-.dropend:hover > .submenu-secretarias {
+.dropend:hover > .submenu-secretarias,
+.dropend > .submenu-secretarias:hover {
   display: block;
 }
+
+
