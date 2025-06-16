@@ -16,15 +16,28 @@
     <div class="container d-flex justify-content-between align-items-center">
       <img src="imgs/logoMaxima.png" alt="Prefeitura de Goiânia" class="logo logo-ajuste" />
 
-      <!-- Ícones mobile -->
-      <div class="d-flex d-lg-none gap-3">
-        <button class="btn btn-link text-dark" aria-label="Buscar">
+      <!-- Ícones e logo mobile -->
+      <div class="d-flex d-lg-none align-items-center gap-3 mobile-header-icons" id="mobileHeaderIcons">
+        <button class="btn btn-link text-dark p-0" id="openSearch" aria-label="Buscar">
           <i class="bi bi-search" style="font-size: 1.5rem;"></i>
         </button>
-        <button class="btn btn-link text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar"
-          aria-controls="mobileSidebar">
+        <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
           <i class="bi bi-list" style="font-size: 1.8rem;"></i>
         </button>
+      </div>
+
+      <!-- Campo de busca oculto inicialmente -->
+      <div class="search-overlay d-lg-none w-100" id="searchOverlay" style="display: none;">
+        <div class="d-flex align-items-center bg-white rounded-3 p-2 shadow-sm w-100">
+          <button type="button" class="btn circulo p-0 me-2 d-flex justify-content-center align-items-center">
+            <i class="bi bi-search text-white"></i>
+          </button>
+          <input type="text" class="form-control border-0 shadow-none flex-grow-1" placeholder="O que você procura?" />
+          <button class="btn p-0 ms-2" id="closeSearch" aria-label="Fechar busca">
+            <i class="bi bi-x-lg fs-5 text-dark"></i>
+          </button>
+        </div>
       </div>
 
       <!-- Menu Desktop -->
@@ -121,7 +134,7 @@
             <li><a class="dropdown-item" href="#">Proteção de Dados</a></li>
           </ul>
         </div>
-        
+
       </nav>
     </div>
 
@@ -134,12 +147,80 @@
           aria-label="Fechar"></button>
       </div>
       <div class="offcanvas-body d-flex flex-column justify-content-between">
+
+
+
+        <!-- Campo de busca CASO QUEIRA QUE ELE FIQUE NO MENU E NÃO NO SITE DESCOMENTAR
+        <div class="mobile-search-box d-flex align-items-center bg-white rounded-3 p-2 mb-4 shadow-sm">
+          <button class="btn p-0 me-2 rounded-circle bg-success d-flex justify-content-center align-items-center"
+            style="width: 40px; height: 40px;">
+            <i class="bi bi-search text-white"></i>
+          </button>
+          <input type="text" class="form-control border-0 shadow-none" placeholder="O que você procura?" />
+          <button class="btn p-0 ms-2" aria-label="Fechar busca">
+            <i class="bi bi-x-lg fs-5 text-dark"></i>
+          </button>
+        </div>
+      -->
+
         <ul class="nav flex-column menu-links">
-          <li class="nav-item"><a class="nav-link" href="#">A Cidade</a></li>
+        <!-- DROPDOWN A CIDADE -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#cidadeSubmenu" role="button" aria-expanded="false"
+              aria-controls="cidadeSubmenu">
+              A Cidade <i class="bi bi-caret-down-fill ms-1"></i>
+            </a>
+            <div class="collapse" id="cidadeSubmenu">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link" href="#">Bairros</a></li>
+                <li><a class="nav-link" href="#">Feriados Municipais</a></li>
+                <li><a class="nav-link" href="#">Hino Oficial</a></li>
+                <li><a class="nav-link" href="#">Símbolos</a></li>
+                <li><a class="nav-link" href="#">Notícias</a></li>
+              </ul>
+            </div>
+          </li>
+
+
           <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Publicações</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">A Prefeitura</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Legislação</a></li>
+
+
+          <!-- DROPDOWN PUBLICAÇÕES -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#PublicacoesSubmenu" role="button" aria-expanded="false"
+              aria-controls="PublicacoesSubmenu">
+              Publicações <i class="bi bi-caret-down-fill ms-1"></i>
+            </a>
+            <div class="collapse" id="PublicacoesSubmenu">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link" href="#">Diário Oficial</a></li>
+                <li><a class="nav-link" href="#">Manuais</a></li>
+                <li><a class="nav-link" href="#">Documentos</a></li>
+                <li><a class="nav-link" href="#">Concurso Público</a></li>
+                <li><a class="nav-link" href="#">Concessão de Diárias</a></li>
+                <li><a class="nav-link" href="#">Estoque de Medicamentos</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+          
+          <!-- DROPDOWN A Prefeitura -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#PrefeituraSubmenu" role="button" aria-expanded="false"
+              aria-controls="PrefeituraSubmenu">
+              A Prefeitura <i class="bi bi-caret-down-fill ms-1"></i>
+            </a>
+            <div class="collapse" id="aPrefeituraDropdown">
+              <ul class="nav flex-column ms-3">
+                <li><a class="nav-link" href="#">Prefeito</a></li>
+                <li><a class="nav-link" href="#">Vice-Prefeito</a></li>
+              </ul>
+            </div>
+          </li>
+          
+          
+          
           <li class="nav-item"><a class="nav-link" href="#">Links Úteis</a></li>
         </ul>
         <div class="social-footer mt-4 text-center">
@@ -156,7 +237,30 @@
     </div>
   </header>
 
+
+
+
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const openSearchBtn = document.getElementById('openSearch');
+    const closeSearchBtn = document.getElementById('closeSearch');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const headerIcons = document.getElementById('mobileHeaderIcons');
+
+    openSearchBtn.addEventListener('click', () => {
+      searchOverlay.style.display = 'flex';
+      headerIcons.style.display = 'none';
+    });
+
+    closeSearchBtn.addEventListener('click', () => {
+      searchOverlay.style.display = 'none';
+      headerIcons.style.display = 'flex';
+    });
+  </script>
+
 </body>
 
 </html>
