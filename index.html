@@ -33,7 +33,7 @@
           <button type="button" class="btn circulo p-0 me-2 d-flex justify-content-center align-items-center">
             <i class="bi bi-search text-white"></i>
           </button>
-          <input type="text" class="form-control border-0 shadow-none flex-grow-1" placeholder="O que você procura?" />
+          <input type="text" class="form-control border-0 shadow-none flex-grow-1" placeholder="Buscar" />
           <button class="btn p-0 ms-2" id="closeSearch" aria-label="Fechar busca">
             <i class="bi bi-x-lg fs-5 text-dark"></i>
           </button>
@@ -46,7 +46,8 @@
 
         <!-- Dropdown A Cidade -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="aCidadeDropdown">A Cidade</a>
+          <a class="nav-link dropdown-toggle" href="#" id="aCidadeDropdown">A Cidade <i
+              class="bi bi-caret-down-fill ms-1"></i></a>
           <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aCidadeDropdown">
             <li><a class="dropdown-item" href="#">Bairros</a></li>
             <li><a class="dropdown-item" href="#">Feriados Municipais</a></li>
@@ -62,7 +63,8 @@
 
         <!-- Dropdown Publicações -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="publicacoesDropdown">Publicações</a>
+          <a class="nav-link dropdown-toggle" href="#" id="publicacoesDropdown">Publicações <i
+              class="bi bi-caret-down-fill ms-1"></i></a>
           <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="publicacoesDropdown">
             <li><a class="dropdown-item" href="#">Diário Oficial</a></li>
             <li><a class="dropdown-item" href="#">Manuais</a></li>
@@ -77,7 +79,8 @@
 
         <!-- Dropdown Publicações -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="aPrefeituraDropdown">A Prefeitura</a>
+          <a class="nav-link dropdown-toggle" href="#" id="aPrefeituraDropdown">A Prefeitura <i
+              class="bi bi-caret-down-fill ms-1"></i></a>
           <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aPrefeituraDropdown">
             <li><a class="dropdown-item" href="#">Prefeito</a></li>
             <li><a class="dropdown-item" href="#">Vice-Prefeito</a></li>
@@ -108,7 +111,8 @@
 
         <!-- Dropdown Legislações -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="LegislacaoDropdown">Legislação</a>
+          <a class="nav-link dropdown-toggle" href="#" id="LegislacaoDropdown">Legislação <i
+              class="bi bi-caret-down-fill ms-1"></i></a>
           <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LegislacaoDropdown">
             <li><a class="dropdown-item" href="#">Principais Legislações</a></li>
             <li><a class="dropdown-item" href="#">Lei Orgânica</a></li>
@@ -123,7 +127,8 @@
 
         <!-- Dropdown Links Úteis -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="LinksDropdown">Links Úteis</a>
+          <a class="nav-link dropdown-toggle" href="#" id="LinksDropdown">Links Úteis <i
+              class="bi bi-caret-down-fill ms-1"></i></a>
           <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LinksDropdown">
             <li><a class="dropdown-item" href="#">Plano Diretor de Guarabira</a></li>
             <li><a class="dropdown-item" href="#">Portal Nacional de Contratações Públicas - PNCP</a></li>
@@ -136,8 +141,53 @@
         </div>
 
       </nav>
+
+
+
     </div>
 
+
+
+    <!-- MUDANÇAS AQUI SÓ NO DESKTOP -->
+    <!-- Container branco com tudo dentro (Desktop apenas) -->
+    <div class="container mt-4 d-none d-lg-block">
+      <div class="bg-white rounded-4 shadow-sm p-3 d-flex flex-wrap justify-content-between align-items-center gap-3">
+
+        <!-- Campo de busca -->
+        <div class="d-flex align-items-center flex-grow-1 bg-light rounded-pill px-3 py-2" style="min-width: 300px;">
+          <button type="button" class="d-flex justify-content-center align-items-center circulo border-0"
+            style="width: 50px; height: 50px;">
+            <i class="bi bi-search text-white fs-5"></i>
+          </button>
+
+          <input type="text" class="form-control border-0 bg-light ms-3" placeholder="Buscar"
+            style="box-shadow: none;" />
+        </div>
+
+        <!-- Ícones sociais -->
+        <div class="d-flex align-items-center gap-3 bg-light rounded-pill px-3 py-2">
+          <a href="#" class="social-icon"><i class="bi bi-instagram fs-5 text-dark"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-facebook fs-5 text-dark"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube fs-5 text-dark"></i></a>
+        </div>
+
+        <!-- Botão de acessibilidade -->
+        <button
+          class="btn btn-light border-0 rounded-pill d-flex align-items-center gap-2 px-3 py-2 shadow-sm btn-acessibilidade">
+          <strong class="acessibilidade-text">Acessibilidade</strong>
+          <i class="bi bi-universal-access fs-5 acessibilidade-icon"></i>
+        </button>
+
+
+      </div>
+    </div>
+
+    
+
+
+
+
+    <!-- MENU MOBILE  -->
     <!-- Offcanvas Menu Mobile -->
     <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mobileSidebar"
       aria-labelledby="mobileSidebarLabel">
@@ -168,8 +218,8 @@
 
           <!-- DROPDOWN A CIDADE -->
           <li class="nav-item">
-            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#cidadeSubmenu" role="button" aria-expanded="false"
-              aria-controls="cidadeSubmenu">
+            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#cidadeSubmenu" role="button"
+              aria-expanded="false" aria-controls="cidadeSubmenu">
               A Cidade <i class="bi bi-caret-right-fill rotate-icon ms-3"></i>
             </a>
             <div class="collapse" id="cidadeSubmenu" data-bs-parent="#mainMenuLinks">
@@ -190,8 +240,8 @@
 
           <!-- DROPDOWN PUBLICAÇÕES -->
           <li class="nav-item">
-            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#publicaçõesSubmenu" role="button" aria-expanded="false"
-              aria-controls="publicaçõesSubmenu">
+            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#publicaçõesSubmenu" role="button"
+              aria-expanded="false" aria-controls="publicaçõesSubmenu">
               Publicações <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
             </a>
             <div class="collapse" id="publicaçõesSubmenu" data-bs-parent="#mainMenuLinks">
@@ -208,8 +258,8 @@
 
           <!-- DROPDOWN A PREFEITURA -->
           <li class="nav-item">
-            <a class="nav-link d" data-bs-toggle="collapse" href="#aPrefeituraSubmenu" role="button" aria-expanded="false"
-              aria-controls="aPrefeituraSubmenu">
+            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#aPrefeituraSubmenu" role="button"
+              aria-expanded="false" aria-controls="aPrefeituraSubmenu">
               A Prefeitura <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
             </a>
 
@@ -236,7 +286,7 @@
 
 
                 <!-- SUBMENU ÓRGÃOS -->
-                 <li>
+                <li>
                   <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
                     href="#SubmenuOrgaos" role="button" aria-expanded="false" aria-controls="SubmenuOrgaos">
                     Órgãos <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
@@ -284,48 +334,56 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // CONTROLE DO CAMPO DE BUSCA
-    const openSearchBtn = document.getElementById('openSearch');
-    const closeSearchBtn = document.getElementById('closeSearch');
-    const searchOverlay = document.getElementById('searchOverlay');
-    const headerIcons = document.getElementById('mobileHeaderIcons');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // CONTROLE DO CAMPO DE BUSCA
+      const openSearchBtn = document.getElementById('openSearch');
+      const closeSearchBtn = document.getElementById('closeSearch');
+      const searchOverlay = document.getElementById('searchOverlay');
+      const headerIcons = document.getElementById('mobileHeaderIcons');
 
-    if (openSearchBtn && closeSearchBtn && searchOverlay && headerIcons) {
-      openSearchBtn.addEventListener('click', () => {
-        searchOverlay.style.display = 'flex';
-        headerIcons.style.display = 'none';
-      });
-
-      closeSearchBtn.addEventListener('click', () => {
-        searchOverlay.style.display = 'none';
-        headerIcons.style.display = 'flex';
-      });
-    }
-
-    // ROTAÇÃO DE SETAS EM DROPDOWNS
-    const toggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
-
-    toggles.forEach(toggle => {
-      const icon = toggle.querySelector('.rotate-icon');
-      const targetId = toggle.getAttribute('href');
-      const target = document.querySelector(targetId);
-
-      if (icon && target) {
-        // Aponta pra baixo ao abrir
-        target.addEventListener('show.bs.collapse', () => {
-          icon.classList.add('rotated');
+      if (openSearchBtn && closeSearchBtn && searchOverlay && headerIcons) {
+        openSearchBtn.addEventListener('click', () => {
+          searchOverlay.style.display = 'flex';
+          headerIcons.style.display = 'none';
         });
 
-        // Volta pra direita ao fechar
-        target.addEventListener('hide.bs.collapse', () => {
-          icon.classList.remove('rotated');
+        closeSearchBtn.addEventListener('click', () => {
+          searchOverlay.style.display = 'none';
+          headerIcons.style.display = 'flex';
         });
       }
+
+      // ROTAÇÃO DE SETAS EM DROPDOWNS E FECHAMENTO DE SUBCOLLAPSES
+      const toggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
+
+      toggles.forEach(toggle => {
+        const icon = toggle.querySelector('.rotate-icon');
+        const targetId = toggle.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (icon && target) {
+          // Só gira a seta se o toggle for o próprio collapse principal
+          target.addEventListener('show.bs.collapse', (e) => {
+            if (e.target === target) {
+              icon.classList.add('rotated');
+            }
+          });
+          target.addEventListener('hide.bs.collapse', (e) => {
+            if (e.target === target) {
+              icon.classList.remove('rotated');
+              // FECHA TODOS OS SUBCOLLAPSES INTERNOS
+              const subCollapses = target.querySelectorAll('.collapse.show');
+              subCollapses.forEach(sub => {
+                const collapseInstance = bootstrap.Collapse.getOrCreateInstance(sub);
+                collapseInstance.hide();
+              });
+            }
+          });
+        }
+      });
     });
-  });
-</script>
+  </script>
 
 
 </body>

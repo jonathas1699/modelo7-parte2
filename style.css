@@ -16,7 +16,7 @@ body {
 /* Logo mais pra esquerda */
 @media (min-width: 992px) {
   .logo-ajuste {
-    margin-left: -20px; 
+    margin-left: -20px;
   }
 }
 
@@ -57,7 +57,8 @@ body {
   border-radius: 10px;
   padding: 10px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: none; /* escondido por padrão */
+  display: none;
+  /* escondido por padrão */
 }
 
 .custom-dropdown .dropdown-item {
@@ -110,6 +111,11 @@ body {
   color: #ffffff;
 }
 
+.btn-accessibility:hover .bi-universal-access {
+  color: #18181A;
+  transition: color 0.2s;
+}
+
 /* Responsivo tablet */
 @media (min-width: 768px) {
   .main-menu {
@@ -129,7 +135,7 @@ body {
 
 /* Hover dropdown no desktop */
 @media (min-width: 992px) {
-  .main-menu > .nav-item.dropdown:hover > .dropdown-menu {
+  .main-menu>.nav-item.dropdown:hover>.dropdown-menu {
     display: block;
     position: absolute;
     top: 100%;
@@ -149,25 +155,26 @@ body {
   min-width: 225px;
   z-index: 1000;
   background: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
-.dropend:hover > .submenu-orgaos,
-.dropend > .submenu-orgaos:hover {
+.dropend:hover>.submenu-orgaos,
+.dropend>.submenu-orgaos:hover {
   display: block;
 }
 
 
-  .nav-link::after {
-    display: none;
-  }
+.nav-link::after {
+  display: none;
+}
 
 
 /* Puxa um pouco pra esquerda */
 .dropEsquerda {
   left: auto;
-  right: 0; /* ou left: 0, dependendo de onde você quer alinhar */
+  right: 0;
+  /* ou left: 0, dependendo de onde você quer alinhar */
 }
 
 
@@ -182,14 +189,14 @@ body {
   min-width: 225px;
   z-index: 1000;
   background: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
 
 /* Mostra apenas quando passa o mouse no item pai */
-.dropend:hover > .submenu-secretarias,
-.dropend > .submenu-secretarias:hover {
+.dropend:hover>.submenu-secretarias,
+.dropend>.submenu-secretarias:hover {
   display: block;
 }
 
@@ -220,11 +227,11 @@ body {
 
 
 .circulo {
-border-radius: 150%;
-width: 80px;
-height: 60px;
-background-color:#0136a8 ;
-color: #ffffff;
+  border-radius: 150%;
+  width: 80px;
+  height: 60px;
+  background-color: #0136a8;
+  color: #ffffff;
 }
 
 .rotate-icon {
@@ -236,3 +243,31 @@ color: #ffffff;
 }
 
 
+.search-bar-desktop {
+  padding-bottom: 1rem;
+}
+
+.search-bar-desktop input::placeholder {
+  color: #6c757d;
+}
+
+.social-icon:hover i {
+  color: #0136a8 !important;
+  /* Azul Bootstrap, troque para outra cor se quiser */
+  transition: color 0.2s;
+}
+
+@media (min-width: 992px) {
+  .btn-acessibilidade {
+    cursor: pointer;
+  }
+
+  .btn-acessibilidade:hover .acessibilidade-text,
+  .btn-acessibilidade:hover .acessibilidade-icon {
+    color: #0136a8; /* Altere para a cor desejada */
+  }
+}
+
+
+
+/* -----------------------PARTE DOS CARDS---------------------------- */
