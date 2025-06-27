@@ -11,380 +11,408 @@
 </head>
 
 <body>
-
-  <header class="custom-header py-2">
-    <div class="container d-flex justify-content-between align-items-center">
-      <img src="imgs/logoMaxima.png" alt="Prefeitura de Goiânia" class="logo logo-ajuste" />
-
-      <!-- Ícones e logo mobile -->
-      <div class="d-flex d-lg-none align-items-center gap-3 mobile-header-icons" id="mobileHeaderIcons">
-        <button class="btn btn-link text-dark p-0" id="openSearch" aria-label="Buscar">
-          <i class="bi bi-search" style="font-size: 1.5rem;"></i>
-        </button>
-        <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
-          <i class="bi bi-list" style="font-size: 1.8rem;"></i>
-        </button>
-      </div>
-
-      <!-- Campo de busca oculto inicialmente -->
-      <div class="search-overlay d-lg-none w-100" id="searchOverlay" style="display: none;">
-        <div class="d-flex align-items-center bg-white rounded-3 p-2 shadow-sm w-100">
-          <button type="button" class="btn circulo p-0 me-2 d-flex justify-content-center align-items-center">
-            <i class="bi bi-search text-white"></i>
+<div class="container px-0">
+  <div class="site-container">
+  
+    <header class="custom-header py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img src="imgs/logoMaxima.png" alt="Prefeitura de Goiânia" class="logo logo-ajuste" />
+  
+        <!-- Ícones e logo mobile -->
+        <div class="d-flex d-lg-none align-items-center gap-3 mobile-header-icons" id="mobileHeaderIcons">
+          <button class="btn btn-link text-dark p-0" id="openSearch" aria-label="Buscar">
+            <i class="bi bi-search" style="font-size: 1.5rem;"></i>
           </button>
-          <input type="text" class="form-control border-0 shadow-none flex-grow-1" placeholder="Buscar" />
-          <button class="btn p-0 ms-2" id="closeSearch" aria-label="Fechar busca">
-            <i class="bi bi-x-lg fs-5 text-dark"></i>
+          <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
+            <i class="bi bi-list" style="font-size: 1.8rem;"></i>
           </button>
         </div>
-      </div>
-
-      <!-- Menu Desktop -->
-      <nav class="d-none d-lg-flex main-menu align-items-center">
-
-
-        <!-- Dropdown A Cidade -->
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="aCidadeDropdown">A Cidade <i
-              class="bi bi-caret-down-fill ms-1"></i></a>
-          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aCidadeDropdown">
-            <li><a class="dropdown-item" href="#">Bairros</a></li>
-            <li><a class="dropdown-item" href="#">Feriados Municipais</a></li>
-            <li><a class="dropdown-item" href="#">Hino Oficial</a></li>
-            <li><a class="dropdown-item" href="#">Símbolos</a></li>
-            <li><a class="dropdown-item" href="#">Notícias</a></li>
-          </ul>
-        </div>
-
-
-        <a class="nav-link" href="#">Serviços</a>
-
-
-        <!-- Dropdown Publicações -->
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="publicacoesDropdown">Publicações <i
-              class="bi bi-caret-down-fill ms-1"></i></a>
-          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="publicacoesDropdown">
-            <li><a class="dropdown-item" href="#">Diário Oficial</a></li>
-            <li><a class="dropdown-item" href="#">Manuais</a></li>
-            <li><a class="dropdown-item" href="#">Documentos</a></li>
-            <li><a class="dropdown-item" href="#">Concurso Público</a></li>
-            <li><a class="dropdown-item" href="#">Concessão de Diárias</a></li>
-            <li><a class="dropdown-item" href="#">Estoque de Medicamentos</a></li>
-          </ul>
-        </div>
-
-
-
-        <!-- Dropdown Publicações -->
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="aPrefeituraDropdown">A Prefeitura <i
-              class="bi bi-caret-down-fill ms-1"></i></a>
-          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aPrefeituraDropdown">
-            <li><a class="dropdown-item" href="#">Prefeito</a></li>
-            <li><a class="dropdown-item" href="#">Vice-Prefeito</a></li>
-            <!-- Sub-dropdown em Secretarias -->
-            <li class="dropend">
-              <a class="dropdown-item dropdown-toggle" href="#" id="secretariasDropdown" data-bs-toggle="dropdown">
-                Secretarias <i class="bi bi-caret-end-fill ms-1"></i>
-              </a>
-              <ul class="dropdown-menu submenu-secretarias" aria-labelledby="secretariasDropdown">
-                <li><a class="dropdown-item" href="#">Gabinete do Prefeito</a></li>
-                <li><a class="dropdown-item" href="#">Secretaria de Admnistração social</a></li>
-                <li><a class="dropdown-item" href="#">Infraestrutura</a></li>
-              </ul>
-            <li class="dropend">
-              <a class="dropdown-item dropdown-toggle" href="#" id="orgaosDropdown" data-bs-toggle="dropdown">
-                Órgãos <i class="bi bi-caret-end-fill ms-1"></i>
-              </a>
-              <ul class="dropdown-menu submenu-orgaos" aria-labelledby="orgaosDropdown">
-                <li><a class="dropdown-item" href="#">SECOM</a></li>
-                <li><a class="dropdown-item" href="#">SEMOB</a></li>
-                <li><a class="dropdown-item" href="#">Procuradoria Jurídica</a></li>
-              </ul>
-            </li>
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- Dropdown Legislações -->
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="LegislacaoDropdown">Legislação <i
-              class="bi bi-caret-down-fill ms-1"></i></a>
-          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LegislacaoDropdown">
-            <li><a class="dropdown-item" href="#">Principais Legislações</a></li>
-            <li><a class="dropdown-item" href="#">Lei Orgânica</a></li>
-            <li><a class="dropdown-item" href="#">Leis Municipais</a></li>
-            <li><a class="dropdown-item" href="#">Medidas Provisórias</a></li>
-            <li><a class="dropdown-item" href="#">Vetos</a></li>
-            <li><a class="dropdown-item" href="#">Decretos</a></li>
-            <li><a class="dropdown-item" href="#">Portarias</a></li>
-          </ul>
-        </div>
-
-
-        <!-- Dropdown Links Úteis -->
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="LinksDropdown">Links Úteis <i
-              class="bi bi-caret-down-fill ms-1"></i></a>
-          <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LinksDropdown">
-            <li><a class="dropdown-item" href="#">Plano Diretor de Guarabira</a></li>
-            <li><a class="dropdown-item" href="#">Portal Nacional de Contratações Públicas - PNCP</a></li>
-            <li><a class="dropdown-item" href="#">PLANO MUNICIAPL PELA PRIMEIRA INFÂNCIA - PMPI</a></li>
-            <li><a class="dropdown-item" href="#">Portal da Transparência</a></li>
-            <li><a class="dropdown-item" href="#">SISCONV</a></li>
-            <li><a class="dropdown-item" href="#">Relatório Estático</a></li>
-            <li><a class="dropdown-item" href="#">Proteção de Dados</a></li>
-          </ul>
-        </div>
-
-      </nav>
-
-
-
-    </div>
-
-
-
-    <!-- MUDANÇAS AQUI SÓ NO DESKTOP -->
-    <!-- Container branco com tudo dentro (Desktop apenas) -->
-    <div class="container mt-4 d-none d-lg-block">
-      <div class="bg-white rounded-4 shadow-sm p-3 d-flex flex-wrap justify-content-between align-items-center gap-3">
-
-        <!-- Campo de busca -->
-        <div class="d-flex align-items-center flex-grow-1 bg-light rounded-pill px-3 py-2" style="min-width: 300px;">
-          <button type="button" class="d-flex justify-content-center align-items-center circulo border-0"
-            style="width: 50px; height: 50px;">
-            <i class="bi bi-search text-white fs-5"></i>
-          </button>
-
-          <input type="text" class="form-control border-0 bg-light ms-3" placeholder="Buscar"
-            style="box-shadow: none;" />
-        </div>
-
-        <!-- Ícones sociais -->
-        <div class="d-flex align-items-center gap-3 bg-light rounded-pill px-3 py-2">
-          <a href="#" class="social-icon"><i class="bi bi-instagram fs-5 text-dark"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-facebook fs-5 text-dark"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-youtube fs-5 text-dark"></i></a>
-        </div>
-
-        <!-- Botão de acessibilidade -->
-        <button
-          class="btn btn-light border-0 rounded-pill d-flex align-items-center gap-2 px-3 py-2 shadow-sm btn-acessibilidade">
-          <strong class="acessibilidade-text">Acessibilidade</strong>
-          <i class="bi bi-universal-access fs-5 acessibilidade-icon"></i>
-        </button>
-
-
-      </div>
-    </div>
-
-    
-
-
-
-
-    <!-- MENU MOBILE  -->
-    <!-- Offcanvas Menu Mobile -->
-    <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mobileSidebar"
-      aria-labelledby="mobileSidebarLabel">
-      <div class="offcanvas-header">
-        <h1 class="offcanvas-title" id="mobileSidebarLabel">Menu</h1>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-          aria-label="Fechar"></button>
-      </div>
-      <div class="offcanvas-body d-flex flex-column justify-content-between">
-
-
-
-        <!-- Campo de busca CASO QUEIRA QUE ELE FIQUE NO MENU E NÃO NO SITE DESCOMENTAR
-        <div class="mobile-search-box d-flex align-items-center bg-white rounded-3 p-2 mb-4 shadow-sm">
-          <button class="btn p-0 me-2 rounded-circle bg-success d-flex justify-content-center align-items-center"
-            style="width: 40px; height: 40px;">
-            <i class="bi bi-search text-white"></i>
-          </button>
-          <input type="text" class="form-control border-0 shadow-none" placeholder="O que você procura?" />
-          <button class="btn p-0 ms-2" aria-label="Fechar busca">
-            <i class="bi bi-x-lg fs-5 text-dark"></i>
-          </button>
-        </div>
-      -->
-
-        <ul class="nav flex-column menu-links" id="mainMenuLinks">
-
-
-          <!-- DROPDOWN A CIDADE -->
-          <li class="nav-item">
-            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#cidadeSubmenu" role="button"
-              aria-expanded="false" aria-controls="cidadeSubmenu">
-              A Cidade <i class="bi bi-caret-right-fill rotate-icon ms-3"></i>
-            </a>
-            <div class="collapse" id="cidadeSubmenu" data-bs-parent="#mainMenuLinks">
-              <ul class="nav flex-column ms-3">
-                <li><a class="nav-link" href="#">Bairros</a></li>
-                <li><a class="nav-link" href="#">Feriados Municipais</a></li>
-                <li><a class="nav-link" href="#">Hino Oficial</a></li>
-                <li><a class="nav-link" href="#">Símbolos</a></li>
-                <li><a class="nav-link" href="#">Notícias</a></li>
-              </ul>
-            </div>
-          </li>
-
-
-          <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
-
-
-
-          <!-- DROPDOWN PUBLICAÇÕES -->
-          <li class="nav-item">
-            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#publicaçõesSubmenu" role="button"
-              aria-expanded="false" aria-controls="publicaçõesSubmenu">
-              Publicações <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
-            </a>
-            <div class="collapse" id="publicaçõesSubmenu" data-bs-parent="#mainMenuLinks">
-              <ul class="nav flex-column ms-3">
-                <li><a class="nav-link" href="#">Diário Oficial</a></li>
-                <li><a class="nav-link" href="#">Manuais</a></li>
-                <li><a class="nav-link" href="#">Documentos</a></li>
-                <li><a class="nav-link" href="#">Concurso Público</a></li>
-                <li><a class="nav-link" href="#">Concessão de Diárias</a></li>
-                <li><a class="nav-link" href="#">Estoque de Medicamentos</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- DROPDOWN A PREFEITURA -->
-          <li class="nav-item">
-            <a class="nav-link d-flex" data-bs-toggle="collapse" href="#aPrefeituraSubmenu" role="button"
-              aria-expanded="false" aria-controls="aPrefeituraSubmenu">
-              A Prefeitura <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
-            </a>
-
-            <div class="collapse" id="aPrefeituraSubmenu" data-bs-parent="#mainMenuLinks">
-              <ul class="nav flex-column ms-3" id="aPrefeituraSubmenuList">
-
-                <li><a class="nav-link" href="#">Prefeito</a></li>
-                <li><a class="nav-link" href="#">Vice-Prefeito</a></li>
-
-                <!-- SUBMENU DENTRO DE A PREFEITURA -->
-                <li>
-                  <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                    href="#SubmenuSecretarias" role="button" aria-expanded="false" aria-controls="SubmenuSecretarias">
-                    Secretarias <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
-                  </a>
-                  <div class="collapse ps-3" id="SubmenuSecretarias" data-bs-parent="#aPrefeituraSubmenuList">
-                    <ul class="nav flex-column">
-                      <li><a class="nav-link" href="#">Gabinete do Prefeito</a></li>
-                      <li><a class="nav-link" href="#">Secretaria de Admnistração Social</a></li>
-                      <li><a class="nav-link" href="#">Infraestrutura</a></li>
-                    </ul>
-                  </div>
-                </li>
-
-
-                <!-- SUBMENU ÓRGÃOS -->
-                <li>
-                  <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                    href="#SubmenuOrgaos" role="button" aria-expanded="false" aria-controls="SubmenuOrgaos">
-                    Órgãos <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
-                  </a>
-                  <div class="collapse ps-3" id="SubmenuOrgaos" data-bs-parent="#aPrefeituraSubmenuList">
-                    <ul class="nav flex-column">
-                      <li><a class="nav-link" href="#">SECOM</a></li>
-                      <li><a class="nav-link" href="#">SEMOB</a></li>
-                      <li><a class="nav-link" href="#">Procuradoria Jurídica</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-
-
-
-
-
-
-
-
-          <li class="nav-item"><a class="nav-link" href="#">Links Úteis</a></li>
-        </ul>
-        <div class="social-footer mt-4 text-center">
-          <div class="mb-3">
-            <a href="#"><i class="bi bi-instagram fs-4 mx-2"></i></a>
-            <a href="#"><i class="bi bi-facebook fs-4 mx-2"></i></a>
-            <a href="#"><i class="bi bi-youtube fs-4 mx-2"></i></a>
+  
+        <!-- Campo de busca oculto inicialmente -->
+        <div class="search-overlay d-lg-none w-100" id="searchOverlay" style="display: none;">
+          <div class="d-flex align-items-center bg-white rounded-3 p-2 shadow-sm w-100">
+            <button type="button" class="btn circulo p-0 me-2 d-flex justify-content-center align-items-center">
+              <i class="bi bi-search text-white"></i>
+            </button>
+            <input type="text" class="form-control border-0 shadow-none flex-grow-1" placeholder="Buscar" />
+            <button class="btn p-0 ms-2" id="closeSearch" aria-label="Fechar busca">
+              <i class="bi bi-x-lg fs-5 text-dark"></i>
+            </button>
           </div>
-          <button class="btn btn-outline-light w-100 btn-accessibility">
-            <i class="bi bi-universal-access me-2"></i> Acessibilidade
+        </div>
+  
+        <!-- Menu Desktop -->
+        <nav class="d-none d-lg-flex main-menu align-items-center">
+  
+  
+          <!-- Dropdown A Cidade -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aCidadeDropdown">A Cidade <i
+                class="bi bi-caret-down-fill ms-1"></i></a>
+            <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aCidadeDropdown">
+              <li><a class="dropdown-item" href="#">Bairros</a></li>
+              <li><a class="dropdown-item" href="#">Feriados Municipais</a></li>
+              <li><a class="dropdown-item" href="#">Hino Oficial</a></li>
+              <li><a class="dropdown-item" href="#">Símbolos</a></li>
+              <li><a class="dropdown-item" href="#">Notícias</a></li>
+            </ul>
+          </div>
+  
+  
+          <a class="nav-link" href="#">Serviços</a>
+  
+  
+          <!-- Dropdown Publicações -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="publicacoesDropdown">Publicações <i
+                class="bi bi-caret-down-fill ms-1"></i></a>
+            <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="publicacoesDropdown">
+              <li><a class="dropdown-item" href="#">Diário Oficial</a></li>
+              <li><a class="dropdown-item" href="#">Manuais</a></li>
+              <li><a class="dropdown-item" href="#">Documentos</a></li>
+              <li><a class="dropdown-item" href="#">Concurso Público</a></li>
+              <li><a class="dropdown-item" href="#">Concessão de Diárias</a></li>
+              <li><a class="dropdown-item" href="#">Estoque de Medicamentos</a></li>
+            </ul>
+          </div>
+  
+  
+  
+          <!-- Dropdown Publicações -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aPrefeituraDropdown">A Prefeitura <i
+                class="bi bi-caret-down-fill ms-1"></i></a>
+            <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="aPrefeituraDropdown">
+              <li><a class="dropdown-item" href="#">Prefeito</a></li>
+              <li><a class="dropdown-item" href="#">Vice-Prefeito</a></li>
+              <!-- Sub-dropdown em Secretarias -->
+              <li class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" id="secretariasDropdown" data-bs-toggle="dropdown">
+                  Secretarias <i class="bi bi-caret-end-fill ms-1"></i>
+                </a>
+                <ul class="dropdown-menu submenu-secretarias" aria-labelledby="secretariasDropdown">
+                  <li><a class="dropdown-item" href="#">Gabinete do Prefeito</a></li>
+                  <li><a class="dropdown-item" href="#">Secretaria de Admnistração social</a></li>
+                  <li><a class="dropdown-item" href="#">Infraestrutura</a></li>
+                </ul>
+              <li class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" id="orgaosDropdown" data-bs-toggle="dropdown">
+                  Órgãos <i class="bi bi-caret-end-fill ms-1"></i>
+                </a>
+                <ul class="dropdown-menu submenu-orgaos" aria-labelledby="orgaosDropdown">
+                  <li><a class="dropdown-item" href="#">SECOM</a></li>
+                  <li><a class="dropdown-item" href="#">SEMOB</a></li>
+                  <li><a class="dropdown-item" href="#">Procuradoria Jurídica</a></li>
+                </ul>
+              </li>
+              </li>
+            </ul>
+          </div>
+  
+  
+          <!-- Dropdown Legislações -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="LegislacaoDropdown">Legislação <i
+                class="bi bi-caret-down-fill ms-1"></i></a>
+            <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LegislacaoDropdown">
+              <li><a class="dropdown-item" href="#">Principais Legislações</a></li>
+              <li><a class="dropdown-item" href="#">Lei Orgânica</a></li>
+              <li><a class="dropdown-item" href="#">Leis Municipais</a></li>
+              <li><a class="dropdown-item" href="#">Medidas Provisórias</a></li>
+              <li><a class="dropdown-item" href="#">Vetos</a></li>
+              <li><a class="dropdown-item" href="#">Decretos</a></li>
+              <li><a class="dropdown-item" href="#">Portarias</a></li>
+            </ul>
+          </div>
+  
+  
+          <!-- Dropdown Links Úteis -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="LinksDropdown">Links Úteis <i
+                class="bi bi-caret-down-fill ms-1"></i></a>
+            <ul class="dropdown-menu custom-dropdown dropEsquerda" aria-labelledby="LinksDropdown">
+              <li><a class="dropdown-item" href="#">Plano Diretor de Guarabira</a></li>
+              <li><a class="dropdown-item" href="#">Portal Nacional de Contratações Públicas - PNCP</a></li>
+              <li><a class="dropdown-item" href="#">PLANO MUNICIAPL PELA PRIMEIRA INFÂNCIA - PMPI</a></li>
+              <li><a class="dropdown-item" href="#">Portal da Transparência</a></li>
+              <li><a class="dropdown-item" href="#">SISCONV</a></li>
+              <li><a class="dropdown-item" href="#">Relatório Estático</a></li>
+              <li><a class="dropdown-item" href="#">Proteção de Dados</a></li>
+            </ul>
+          </div>
+  
+        </nav>
+  
+  
+  
+      </div>
+  
+  
+  
+      <!-- MUDANÇAS AQUI SÓ NO DESKTOP -->
+      <!-- Container branco com tudo dentro (Desktop apenas) -->
+      <div class="container mt-4 d-none d-lg-block">
+        <div class="bg-white rounded-4 shadow-sm p-3 d-flex flex-wrap justify-content-between align-items-center gap-3">
+  
+          <!-- Campo de busca -->
+          <div class="d-flex align-items-center flex-grow-1 bg-light rounded-pill px-3 py-2" style="min-width: 300px;">
+            <button type="button" class="d-flex justify-content-center align-items-center circulo border-0"
+              style="width: 50px; height: 50px;">
+              <i class="bi bi-search text-white fs-5"></i>
+            </button>
+  
+            <input type="text" class="form-control border-0 bg-light ms-3" placeholder="Buscar"
+              style="box-shadow: none;" />
+          </div>
+  
+          <!-- Ícones sociais -->
+          <div class="d-flex align-items-center gap-3 bg-light rounded-pill px-3 py-2">
+            <a href="#" class="social-icon"><i class="bi bi-instagram fs-5 text-dark"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-facebook fs-5 text-dark"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-youtube fs-5 text-dark"></i></a>
+          </div>
+  
+          <!-- Botão de acessibilidade -->
+          <button
+            class="btn btn-light border-0 rounded-pill d-flex align-items-center gap-2 px-3 py-2 shadow-sm btn-acessibilidade">
+            <strong class="acessibilidade-text">Acessibilidade</strong>
+            <i class="bi bi-universal-access fs-5 acessibilidade-icon"></i>
           </button>
+  
+  
+        </div>
+      </div>
+  
+      
+  
+  
+  
+  
+  
+  
+      <!-- MENU MOBILE  -->
+      <!-- Offcanvas Menu Mobile -->
+      <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mobileSidebar"
+        aria-labelledby="mobileSidebarLabel">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title" id="mobileSidebarLabel">Menu</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Fechar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+  
+  
+  
+          <!-- Campo de busca CASO QUEIRA QUE ELE FIQUE NO MENU E NÃO NO SITE DESCOMENTAR
+          <div class="mobile-search-box d-flex align-items-center bg-white rounded-3 p-2 mb-4 shadow-sm">
+            <button class="btn p-0 me-2 rounded-circle bg-success d-flex justify-content-center align-items-center"
+              style="width: 40px; height: 40px;">
+              <i class="bi bi-search text-white"></i>
+            </button>
+            <input type="text" class="form-control border-0 shadow-none" placeholder="O que você procura?" />
+            <button class="btn p-0 ms-2" aria-label="Fechar busca">
+              <i class="bi bi-x-lg fs-5 text-dark"></i>
+            </button>
+          </div>
+        -->
+  
+          <ul class="nav flex-column menu-links" id="mainMenuLinks">
+  
+  
+            <!-- DROPDOWN A CIDADE -->
+            <li class="nav-item">
+              <a class="nav-link d-flex" data-bs-toggle="collapse" href="#cidadeSubmenu" role="button"
+                aria-expanded="false" aria-controls="cidadeSubmenu">
+                A Cidade <i class="bi bi-caret-right-fill rotate-icon ms-3"></i>
+              </a>
+              <div class="collapse" id="cidadeSubmenu" data-bs-parent="#mainMenuLinks">
+                <ul class="nav flex-column ms-3">
+                  <li><a class="nav-link" href="#">Bairros</a></li>
+                  <li><a class="nav-link" href="#">Feriados Municipais</a></li>
+                  <li><a class="nav-link" href="#">Hino Oficial</a></li>
+                  <li><a class="nav-link" href="#">Símbolos</a></li>
+                  <li><a class="nav-link" href="#">Notícias</a></li>
+                </ul>
+              </div>
+            </li>
+  
+  
+            <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
+  
+  
+  
+            <!-- DROPDOWN PUBLICAÇÕES -->
+            <li class="nav-item">
+              <a class="nav-link d-flex" data-bs-toggle="collapse" href="#publicaçõesSubmenu" role="button"
+                aria-expanded="false" aria-controls="publicaçõesSubmenu">
+                Publicações <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
+              </a>
+              <div class="collapse" id="publicaçõesSubmenu" data-bs-parent="#mainMenuLinks">
+                <ul class="nav flex-column ms-3">
+                  <li><a class="nav-link" href="#">Diário Oficial</a></li>
+                  <li><a class="nav-link" href="#">Manuais</a></li>
+                  <li><a class="nav-link" href="#">Documentos</a></li>
+                  <li><a class="nav-link" href="#">Concurso Público</a></li>
+                  <li><a class="nav-link" href="#">Concessão de Diárias</a></li>
+                  <li><a class="nav-link" href="#">Estoque de Medicamentos</a></li>
+                </ul>
+              </div>
+            </li>
+  
+            <!-- DROPDOWN A PREFEITURA -->
+            <li class="nav-item">
+              <a class="nav-link d-flex" data-bs-toggle="collapse" href="#aPrefeituraSubmenu" role="button"
+                aria-expanded="false" aria-controls="aPrefeituraSubmenu">
+                A Prefeitura <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
+              </a>
+  
+              <div class="collapse" id="aPrefeituraSubmenu" data-bs-parent="#mainMenuLinks">
+                <ul class="nav flex-column ms-3" id="aPrefeituraSubmenuList">
+  
+                  <li><a class="nav-link" href="#">Prefeito</a></li>
+                  <li><a class="nav-link" href="#">Vice-Prefeito</a></li>
+  
+                  <!-- SUBMENU DENTRO DE A PREFEITURA -->
+                  <li>
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                      href="#SubmenuSecretarias" role="button" aria-expanded="false" aria-controls="SubmenuSecretarias">
+                      Secretarias <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
+                    </a>
+                    <div class="collapse ps-3" id="SubmenuSecretarias" data-bs-parent="#aPrefeituraSubmenuList">
+                      <ul class="nav flex-column">
+                        <li><a class="nav-link" href="#">Gabinete do Prefeito</a></li>
+                        <li><a class="nav-link" href="#">Secretaria de Admnistração Social</a></li>
+                        <li><a class="nav-link" href="#">Infraestrutura</a></li>
+                      </ul>
+                    </div>
+                  </li>
+  
+  
+                  <!-- SUBMENU ÓRGÃOS -->
+                  <li>
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                      href="#SubmenuOrgaos" role="button" aria-expanded="false" aria-controls="SubmenuOrgaos">
+                      Órgãos <i class="bi bi-caret-right-fill rotate-icon ms-1"></i>
+                    </a>
+                    <div class="collapse ps-3" id="SubmenuOrgaos" data-bs-parent="#aPrefeituraSubmenuList">
+                      <ul class="nav flex-column">
+                        <li><a class="nav-link" href="#">SECOM</a></li>
+                        <li><a class="nav-link" href="#">SEMOB</a></li>
+                        <li><a class="nav-link" href="#">Procuradoria Jurídica</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            <li class="nav-item"><a class="nav-link" href="#">Links Úteis</a></li>
+          </ul>
+          <div class="social-footer mt-4 text-center">
+            <div class="mb-3">
+              <a href="#"><i class="bi bi-instagram fs-4 mx-2"></i></a>
+              <a href="#"><i class="bi bi-facebook fs-4 mx-2"></i></a>
+              <a href="#"><i class="bi bi-youtube fs-4 mx-2"></i></a>
+            </div>
+            <button class="btn btn-outline-light w-100 btn-accessibility">
+              <i class="bi bi-universal-access me-2"></i> Acessibilidade
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <!-- PARTE DAS NOTÍCIAS SÓ NO DESKTOP -->
+   <div class="news-container">
+    <!-- Imagem Principal com texto sobreposto -->
+    <div class="main-wrapper">
+      <img src="imgs/WhatsApp Image 2025-06-26 at 14.30.04.jpeg" class="main-image" alt="Destaque Principal">
+      <div class="main-title-overlay">
+        Prefeitura de Goiânia moderniza iluminação da Rodovia dos Romeiros com Programa Brilha Goiânia
+      </div>
+    </div>
+
+    <!-- Imagens menores lado a lado -->
+    <div class="bottom-images">
+      <div class="news-item">
+        <img src="imgs/WhatsApp Image 2025-06-26 at 14.30.36.jpeg" alt="Notícia 1">
+        <div class="news-text">
+          Procon Goiânia aponta variação de até 163,74% nos preços de passagens para as férias de julho
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="imgs/WhatsApp Image 2025-06-26 at 14.30.36.jpeg" alt="Notícia 2">
+        <div class="news-text">
+          Prefeitura de Goiânia alerta para importância do diagnóstico e controle da diabetes gestacional
         </div>
       </div>
     </div>
-  </header>
-
-
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // CONTROLE DO CAMPO DE BUSCA
-      const openSearchBtn = document.getElementById('openSearch');
-      const closeSearchBtn = document.getElementById('closeSearch');
-      const searchOverlay = document.getElementById('searchOverlay');
-      const headerIcons = document.getElementById('mobileHeaderIcons');
-
-      if (openSearchBtn && closeSearchBtn && searchOverlay && headerIcons) {
-        openSearchBtn.addEventListener('click', () => {
-          searchOverlay.style.display = 'flex';
-          headerIcons.style.display = 'none';
-        });
-
-        closeSearchBtn.addEventListener('click', () => {
-          searchOverlay.style.display = 'none';
-          headerIcons.style.display = 'flex';
-        });
-      }
-
-      // ROTAÇÃO DE SETAS EM DROPDOWNS E FECHAMENTO DE SUBCOLLAPSES
-      const toggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
-
-      toggles.forEach(toggle => {
-        const icon = toggle.querySelector('.rotate-icon');
-        const targetId = toggle.getAttribute('href');
-        const target = document.querySelector(targetId);
-
-        if (icon && target) {
-          // Só gira a seta se o toggle for o próprio collapse principal
-          target.addEventListener('show.bs.collapse', (e) => {
-            if (e.target === target) {
-              icon.classList.add('rotated');
-            }
+  </div>
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // CONTROLE DO CAMPO DE BUSCA
+        const openSearchBtn = document.getElementById('openSearch');
+        const closeSearchBtn = document.getElementById('closeSearch');
+        const searchOverlay = document.getElementById('searchOverlay');
+        const headerIcons = document.getElementById('mobileHeaderIcons');
+  
+        if (openSearchBtn && closeSearchBtn && searchOverlay && headerIcons) {
+          openSearchBtn.addEventListener('click', () => {
+            searchOverlay.style.display = 'flex';
+            headerIcons.style.display = 'none';
           });
-          target.addEventListener('hide.bs.collapse', (e) => {
-            if (e.target === target) {
-              icon.classList.remove('rotated');
-              // FECHA TODOS OS SUBCOLLAPSES INTERNOS
-              const subCollapses = target.querySelectorAll('.collapse.show');
-              subCollapses.forEach(sub => {
-                const collapseInstance = bootstrap.Collapse.getOrCreateInstance(sub);
-                collapseInstance.hide();
-              });
-            }
+  
+          closeSearchBtn.addEventListener('click', () => {
+            searchOverlay.style.display = 'none';
+            headerIcons.style.display = 'flex';
           });
         }
+  
+        // ROTAÇÃO DE SETAS EM DROPDOWNS E FECHAMENTO DE SUBCOLLAPSES
+        const toggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
+  
+        toggles.forEach(toggle => {
+          const icon = toggle.querySelector('.rotate-icon');
+          const targetId = toggle.getAttribute('href');
+          const target = document.querySelector(targetId);
+  
+          if (icon && target) {
+            // Só gira a seta se o toggle for o próprio collapse principal
+            target.addEventListener('show.bs.collapse', (e) => {
+              if (e.target === target) {
+                icon.classList.add('rotated');
+              }
+            });
+            target.addEventListener('hide.bs.collapse', (e) => {
+              if (e.target === target) {
+                icon.classList.remove('rotated');
+                // FECHA TODOS OS SUBCOLLAPSES INTERNOS
+                const subCollapses = target.querySelectorAll('.collapse.show');
+                subCollapses.forEach(sub => {
+                  const collapseInstance = bootstrap.Collapse.getOrCreateInstance(sub);
+                  collapseInstance.hide();
+                });
+              }
+            });
+          }
+        });
       });
-    });
-  </script>
-
+    </script>
+  
+  </div>
+</div>
 
 </body>
 
