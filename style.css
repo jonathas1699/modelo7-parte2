@@ -228,9 +228,9 @@ body {
 
 
 .circulo {
-  border-radius: 150%;
-  width: 80px;
-  height: 60px;
+  border-radius: 2rem;
+  width: 5rem;
+  height: 3.75rem;
   background-color: #0136a8;
   color: #ffffff;
 }
@@ -468,4 +468,49 @@ body {
 .quick-access .tab-content {
   border-radius: 1rem;
   background: transparent;
+}
+
+/* Costumização das abas do dashboard */
+
+/* Scroll horizontal nas abas em telas pequenas */
+.tabs-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 991.98px) {
+  .tabs-scroll {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
+    padding-bottom: 2px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: max-content;
+  }
+  .tabs-scroll .nav-item {
+    flex: 0 0 auto;
+    min-width: 120px;
+    margin-right: 0.5rem;
+  }
+  
+  .tabs-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .tabs-scroll .nav-link {
+    display: block;
+    max-width: 8rem;         /* ajuste conforme necessário */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
