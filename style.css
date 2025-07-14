@@ -468,6 +468,7 @@ body {
 .quick-access .tab-content {
   border-radius: 1rem;
   background: transparent;
+  padding: 1rem;
 }
 
 /* Costumização das abas do dashboard */
@@ -503,14 +504,22 @@ body {
   }
 }
 @media (max-width: 991.98px) {
-  .tabs-scroll .nav-link {
-    display: block;
-    max-width: 8rem;         /* ajuste conforme necessário */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1rem;
+  .quick-access .tab-pane .col .d-block {
+    width: 135.5px !important;
+    min-width: 135.5px !important;
+    max-width: 135.5px !important;
+    height: 130.56px !important;
+    min-height: 130.56px !important;
+    max-height: 130.56px !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+}
+
+.icone-dashboard{
+  color: #0136a8;
+  
 }

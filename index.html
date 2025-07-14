@@ -372,37 +372,73 @@
             <div class="quick-access dashboard-rounded dashboard-bg-white shadow-sm">
               <!-- Abas -->
               <div class="tabs-scroll-wrapper">
-                <ul class="nav nav-tabs py-2 d-flex justify-content-center align-items-center tabs-scroll px-2" id="accessTab" role="tablist">
+                <ul class="nav nav-tabs py-2 d-flex justify-content-center align-items-center tabs-scrolSl px-2" id="accessTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="cidadao-tab" data-bs-toggle="tab" data-bs-target="#cidadao" type="button" role="tab">Acesso Rápido</button>
+                    <button class="nav-link active" id="acesso-rapido-tab" data-bs-toggle="tab" data-bs-target="#acesso-rapido" type="button" role="tab">Acesso Rápido</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="empresa-tab" data-bs-toggle="tab" data-bs-target="#empresa" type="button" role="tab">Solicitar Informação</button>
+                    <button class="nav-link" id="e-sic-tab" data-bs-toggle="tab" data-bs-target="#e-sic" type="button" role="tab">e-SIC</button>
                   </li>
                   <!-- Adicione mais abas conforme necessário -->
                 </ul>
               </div>
               <!-- Conteúdo das abas -->
               <div class="tab-content" id="accessTabContent">
-                <div class="tab-pane fade show active" id="cidadao" role="tabpanel">
+                <div class="tab-pane fade show active" id="acesso-rapido" role="tabpanel">
                   <div class="row row-cols-2 g-3">
                     <div class="col text-center">
                       <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
-                        <div class="mb-2"><i class="bi bi-file-earmark-text fs-3"></i></div>
-                        <div>Nota Fiscal Eletrônica</div>
+                        <div class="mb-2"><i class="bi bi-question-circle fs-3 icone-dashboard"></i></div>
+                        <div class="">Perguntas Frequentes</div>
                       </a>
                     </div>
                     <div class="col text-center">
                       <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
-                        <div class="mb-2"><i class="bi bi-house fs-3"></i></div>
-                        <div>Programa de Habitação</div>
+                        <div class="mb-2"><i class="bi bi-telephone-fill fs-3 icone-dashboard icone-dashboard"></i></div>
+                        <div class="">Ouvidoria</div>
                       </a>
                     </div>
-                    <!-- Outros ícones -->
+                    <div class="col text-center">
+                      <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
+                        <div class="mb-2"><i class="bi bi-newspaper fs-3 icone-dashboard"></i></div>
+                        <div class="">Central de Licitações</div>
+                      </a>
+                    </div>
+                    <div class="col text-center">
+                      <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
+                        <div class="mb-2"><i class="bi bi-search fs-3 icone-dashboard"></i></div>
+                        <div class="">Portal da Transparência</div>
+                      </a>
+                    </div>               
                   </div>
                 </div>
-                <div class="tab-pane fade" id="empresa" role="tabpanel">
-                  <!-- Conteúdo da aba Empresa -->
+                <!-- ABA E-SIC -->
+                <div class="tab-pane fade" id="e-sic" role="tabpanel">
+                  <div class="row row-cols-2 g-3">
+                    <div class="col text-center">
+                      <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
+                        <div class="mb-2"><i class="bi bi-question-circle fs-3 icone-dashboard"></i></div>
+                        <div class="">Pedido Presencial PF</div>
+                      </a>
+                    </div>
+                    <div class="col text-center">
+                      <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
+                        <div class="mb-2"><i class="bi bi-telephone-fill fs-3 icone-dashboard"></i></div>
+                        <div class="">Pedido Presencial PJ</div>
+                      </a>
+                    </div>
+                    <div class="col text-center">
+                      <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
+                        <div class="mb-2"><i class="bi bi-telephone-fill fs-3 icone-dashboard"></i></div>
+                        <div class="">Consultar Atendimento</div>
+                      </a>
+                    </div>
+                    <div class="col text-center">
+                      <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
+                        <div class="mb-2"><i class="bi bi-telephone-fill fs-3 icone-dashboard"></i></div>
+                        <div class="">Sobre</div>
+                      </a>
+                    </div>
                 </div>
               </div>
             </div>
