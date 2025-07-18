@@ -587,3 +587,15 @@ body {
     align-items: center;
   }
 }
+
+/* Alinhamento lateral entre dashboard e notícias */
+
+.noticias-section-bg {
+  background: #f5f7fa; /* Ou a cor desejada */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
