@@ -523,3 +523,67 @@ body {
   color: #0136a8;
   
 }
+
+/* === CARDS DE ACESSO RÁPIDO (BARRA VERDE) === */
+.quick-access-bar {
+  display: flex;
+  border-radius: 18px 18px 0 0; /* igual ao dashboard, só em cima */
+  overflow: hidden;
+  background: linear-gradient(90deg, #1c819b 0%, #054de9 100%);
+  margin-bottom: 0;
+}
+.quick-access.dashboard-rounded {
+  border-radius: 18px !important;
+  overflow: hidden;
+}
+.quick-access-card {
+  flex: 1 1 0;
+  text-align: center;
+  padding: 1.5rem 0 1.2rem 0;
+  background: none;
+  border: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.quick-access-card:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+.quick-access-card .quick-access-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.quick-access-card .quick-access-title {
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.5rem;
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 1199.98px) {
+  .quick-access-bar {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .quick-access-card {
+    padding: 1rem 0 0.8rem 0;
+    font-size: 0.95rem;
+  }
+  .quick-access-card .quick-access-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Alinhamento lateral entre dashboard e notícias */
+@media (min-width: 992px) {
+  .news-container,
+  .quick-access.dashboard-rounded {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row.gy-4 > .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

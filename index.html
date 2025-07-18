@@ -334,7 +334,7 @@
         </div>
       </header>
 
-      <!-- SEÇÃO DE NOTÍCIAS E MENU DE ACESSO RÁPIDO -->
+      <!-- SEÇÃO DE NOTÍCIAS E DASHBOARD COM CARDS DE ACESSO RÁPIDO -->
       <div class="container my-5">
         <div class="row gy-4">
           <!-- Coluna da notícia (ocupa metade em lg, 100% no mobile) -->
@@ -367,17 +367,40 @@
          
          
          
-          <!-- DASHBOARD -->
+          <!-- Coluna do dashboard e cards de acesso rápido -->
           <div class="col-lg-6">
-            <div class="quick-access dashboard-rounded dashboard-bg-white shadow-sm">
+            <!-- DASHBOARD + CARDS DE ACESSO RÁPIDO INTEGRADOS -->
+            <div class="quick-access dashboard-rounded dashboard-bg-white shadow-sm mt-0">
+              <!-- Barra de cards de acesso rápido -->
+              <div class="quick-access-bar mb-0">
+                <div class="quick-access-card" data-border="right">
+                  <i class="bi bi-lock-fill quick-access-icon"></i>
+                  <div class="quick-access-title">Proteção de<br>Dados</div>
+                </div>
+                <div class="quick-access-card" data-border="right">
+                  <i class="bi bi-bank2 quick-access-icon"></i>
+                  <div class="quick-access-title">Secretarias e<br>Governo</div>
+                </div>
+                <div class="quick-access-card" data-border="right">
+                  <i class="bi bi-gear-wide-connected quick-access-icon"></i>
+                  <div class="quick-access-title">Portal de<br>Serviços</div>
+                </div>
+                <div class="quick-access-card">
+                  <i class="bi bi-chat-square-text-fill quick-access-icon"></i>
+                  <div class="quick-access-title">Ouvidoria<br>Geral</div>
+                </div>
+              </div>
               <!-- Abas -->
               <div class="tabs-scroll-wrapper">
-                <ul class="nav nav-tabs py-2 d-flex justify-content-center align-items-center tabs-scrolSl px-2" id="accessTab" role="tablist">
+                <ul class="nav nav-tabs py-2 d-flex justify-content-center align-items-center tabs-scrolSl px-2"
+                  id="accessTab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="acesso-rapido-tab" data-bs-toggle="tab" data-bs-target="#acesso-rapido" type="button" role="tab">Acesso Rápido</button>
+                    <button class="nav-link active" id="acesso-rapido-tab" data-bs-toggle="tab"
+                      data-bs-target="#acesso-rapido" type="button" role="tab">Acesso Rápido</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="e-sic-tab" data-bs-toggle="tab" data-bs-target="#e-sic" type="button" role="tab">e-SIC</button>
+                    <button class="nav-link" id="e-sic-tab" data-bs-toggle="tab" data-bs-target="#e-sic"
+                      type="button" role="tab">e-SIC</button>
                   </li>
                   <!-- Adicione mais abas conforme necessário -->
                 </ul>
@@ -394,7 +417,7 @@
                     </div>
                     <div class="col text-center">
                       <a href="#" class="d-block bg-light p-3 rounded text-decoration-none text-dark shadow-sm">
-                        <div class="mb-2"><i class="bi bi-telephone-fill fs-3 icone-dashboard icone-dashboard"></i></div>
+                        <div class="mb-2"><i class="bi bi-telephone-fill fs-3 icone-dashboard"></i></div>
                         <div class="">Ouvidoria</div>
                       </a>
                     </div>
@@ -409,7 +432,7 @@
                         <div class="mb-2"><i class="bi bi-search fs-3 icone-dashboard"></i></div>
                         <div class="">Portal da Transparência</div>
                       </a>
-                    </div>               
+                    </div>
                   </div>
                 </div>
                 <!-- ABA E-SIC -->
@@ -445,72 +468,77 @@
           </div>
         </div>
       </div>
+      <!-- FIM SEÇÃO DE NOTÍCIAS E DASHBOARD COM CARDS DE ACESSO RÁPIDO -->
 
       <!-- TELA NOTÍCIAS -->
-       <section class="noticias-section py-5">
+      <section class="noticias-section py-5">
         <h1>Notícias</h1>
-  <div class="container-fluid px-0 bg ">
-    <div class="row gx-4 gy-4">
-      
-      <!-- COLUNA ESQUERDA: destaque + lista -->
-      <div class="col-lg-8">
-        <!-- Notícia principal grande -->
-        <div class="card border-0 shadow-sm mb-4">
-          <img src="imgs/destaque.jpg" class="card-img-top rounded" alt="Notícia principal">
-          <div class="card-body px-0">
-            <h5 class="card-title fw-bold">Título da notícia principal</h5>
+        <div class="container-fluid px-0 bg ">
+          <div class="row gx-4 gy-4">
+
+            <!-- COLUNA ESQUERDA: destaque + lista -->
+            <div class="col-lg-8">
+              <!-- Notícia principal grande -->
+              <div class="card border-0 shadow-sm mb-4">
+                <img src="imgs/destaque.jpg" class="card-img-top rounded" alt="Notícia principal">
+                <div class="card-body px-0">
+                  <h5 class="card-title fw-bold">Título da notícia principal</h5>
+                </div>
+              </div>
+
+              <!-- Lista de notícias menores -->
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex gap-3 align-items-start">
+                  <img src="imgs/thumb1.jpg" alt="Notícia" class="rounded"
+                    style="width: 100px; height: 70px; object-fit: cover;">
+                  <div class="small fw-medium">Título da notícia pequena 1</div>
+                </div>
+                <div class="d-flex gap-3 align-items-start">
+                  <img src="imgs/thumb2.jpg" alt="Notícia" class="rounded"
+                    style="width: 100px; height: 70px; object-fit: cover;">
+                  <div class="small fw-medium">Título da notícia pequena 2</div>
+                </div>
+                <div class="d-flex gap-3 align-items-start">
+                  <img src="imgs/thumb3.jpg" alt="Notícia" class="rounded"
+                    style="width: 100px; height: 70px; object-fit: cover;">
+                  <div class="small fw-medium">Título da notícia pequena 3</div>
+                </div>
+                <div class="d-flex gap-3 align-items-start">
+                  <img src="imgs/thumb4.jpg" alt="Notícia" class="rounded"
+                    style="width: 100px; height: 70px; object-fit: cover;">
+                  <div class="small fw-medium">Título da notícia pequena 4</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- COLUNA DIREITA: cards emparelhados -->
+            <div class="col-lg-4">
+              <div class="row g-3">
+                <!-- 6 imagens (duas por linha) -->
+                <div class="col-6">
+                  <img src="imgs/card1.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-6">
+                  <img src="imgs/card2.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-6">
+                  <img src="imgs/card3.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-6">
+                  <img src="imgs/card4.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-6">
+                  <img src="imgs/card5.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-6">
+                  <img src="imgs/card6.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-
-        <!-- Lista de notícias menores -->
-        <div class="d-flex flex-column gap-3">
-          <div class="d-flex gap-3 align-items-start">
-            <img src="imgs/thumb1.jpg" alt="Notícia" class="rounded" style="width: 100px; height: 70px; object-fit: cover;">
-            <div class="small fw-medium">Título da notícia pequena 1</div>
-          </div>
-          <div class="d-flex gap-3 align-items-start">
-            <img src="imgs/thumb2.jpg" alt="Notícia" class="rounded" style="width: 100px; height: 70px; object-fit: cover;">
-            <div class="small fw-medium">Título da notícia pequena 2</div>
-          </div>
-          <div class="d-flex gap-3 align-items-start">
-            <img src="imgs/thumb3.jpg" alt="Notícia" class="rounded" style="width: 100px; height: 70px; object-fit: cover;">
-            <div class="small fw-medium">Título da notícia pequena 3</div>
-          </div>
-          <div class="d-flex gap-3 align-items-start">
-            <img src="imgs/thumb4.jpg" alt="Notícia" class="rounded" style="width: 100px; height: 70px; object-fit: cover;">
-            <div class="small fw-medium">Título da notícia pequena 4</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- COLUNA DIREITA: cards emparelhados -->
-      <div class="col-lg-4">
-        <div class="row g-3">
-          <!-- 6 imagens (duas por linha) -->
-          <div class="col-6">
-            <img src="imgs/card1.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-6">
-            <img src="imgs/card2.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-6">
-            <img src="imgs/card3.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-6">
-            <img src="imgs/card4.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-6">
-            <img src="imgs/card5.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
-          </div>
-          <div class="col-6">
-            <img src="imgs/card6.jpg" alt="Banner" class="img-fluid rounded shadow-sm">
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
