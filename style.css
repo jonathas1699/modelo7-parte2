@@ -313,12 +313,11 @@ body {
     .bottom-images {
       display: flex;
       justify-content: space-between;
-      gap: 1rem;
       padding: 1rem;
     }
 
     .news-item {
-      width: 14rem;
+      min-width: 50%;
       background-color: #0136a8;
       border-radius: 8px;
       overflow: hidden;
@@ -556,7 +555,7 @@ body {
   font-weight: 700;
   color: #fff;
   margin-top: 0.5rem;
-  font-size: 1.08rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
@@ -569,7 +568,7 @@ body {
     font-size: 0.95rem;
   }
   .quick-access-card .quick-access-icon {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 }
 
