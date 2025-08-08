@@ -1,9 +1,27 @@
+/* ============================================================================================= */
+/* ================================= ESTILOS GLOBAIS ====================================== */
+/* ============================================================================================= */
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", sans-serif;
   background-color: #e3e7e9;
 }
+
+/* Sobrescreve a largura máxima dos containers do Bootstrap */
+.container, 
+.container-lg, 
+.container-md, 
+.container-sm, 
+.container-xl, 
+.container-xxl {
+    max-width: 1250px; /* ou o valor que você preferir */
+}
+
+/* ============================================================================================= */
+/* =============================== MÓDULO HEADER ========================================== */
+/* ============================================================================================= */
 
 .custom-header {
   background-color: #e3e7e9;
@@ -13,18 +31,6 @@ body {
   height: 60px;
   width: auto;
 }
-
-
-/* Sobrescreve a largura máxima dos containers do Bootstrap */
-.container, 
-.container-lg, 
-.container-md, 
-.container-sm, 
-.container-xl, 
-.container-xxl {
-    max-width: 1200px; /* ou o valor que você preferir */
-}
-
 
 .main-menu {
   gap: 20px;
@@ -56,7 +62,11 @@ body {
   border-radius: 6px;
 }
 
-/* Dropdown personalizado */
+.nav-link::after {
+  display: none;
+}
+
+/* === DROPDOWN MENUS === */
 .custom-dropdown {
   width: 300px;
   border-radius: 10px;
@@ -78,6 +88,47 @@ body {
   color: #0136a8;
 }
 
+.submenu-secretarias {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 225px;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.dropend:hover>.submenu-secretarias,
+.dropend>.submenu-secretarias:hover {
+  display: block;
+}
+
+.submenu-orgaos {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 225px;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.dropend:hover>.submenu-orgaos,
+.dropend>.submenu-orgaos:hover {
+  display: block;
+}
+
+.dropEsquerda {
+  left: auto;
+  right: 0;
+  /* ou left: 0, dependendo de onde você quer alinhar */
+}
+
+/* === MENU MOBILE (OFFCANVAS) === */
 .custom-offcanvas {
   background-color: #012643;
   color: white;
@@ -101,6 +152,56 @@ body {
   border-right: 3px solid #18181A;
 }
 
+/* === BARRA DE PESQUISA === */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #e3e7e9;
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar-desktop {
+  padding-bottom: 1rem;
+}
+
+.search-bar-desktop input::placeholder {
+  color: #6c757d;
+}
+
+.circulo {
+  border-radius: 2rem;
+  width: 5rem;
+  height: 3.75rem;
+  background-color: #0136a8;
+  color: #ffffff;
+}
+
+.circulo:focus,
+.circulo:active {
+  background-color: #0136a8 !important;
+  color: #fff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.circulo i {
+  color: #fff !important;
+}
+
+.rotate-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon.rotated {
+  transform: rotate(90deg);
+}
+
+/* === ELEMENTOS SOCIAIS E ACESSIBILIDADE === */
 .social-footer i {
   color: #ffffff;
   transition: color 0.3s;
@@ -108,6 +209,12 @@ body {
 
 .social-footer i:hover {
   color: #18181A;
+}
+
+.social-icon:hover i {
+  color: #0136a8 !important;
+  /* Azul Bootstrap, troque para outra cor se quiser */
+  transition: color 0.2s;
 }
 
 .btn-accessibility:hover {
@@ -121,6 +228,7 @@ body {
   transition: color 0.2s;
 }
 
+/* === RESPONSIVIDADE DO HEADER === */
 /* Responsivo tablet */
 @media (min-width: 768px) {
   .main-menu {
@@ -148,121 +256,7 @@ body {
     z-index: 1000;
     background-color: white;
   }
-}
 
-
-/* ...existing code... */
-.submenu-orgaos {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  min-width: 225px;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.dropend:hover>.submenu-orgaos,
-.dropend>.submenu-orgaos:hover {
-  display: block;
-}
-
-
-.nav-link::after {
-  display: none;
-}
-
-
-/* Puxa um pouco pra esquerda */
-.dropEsquerda {
-  left: auto;
-  right: 0;
-  /* ou left: 0, dependendo de onde você quer alinhar */
-}
-
-
-
-/* Esconde o submenu de secretarias por padrão */
-/* ...existing code... */
-.submenu-secretarias {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  min-width: 225px;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-
-/* Mostra apenas quando passa o mouse no item pai */
-.dropend:hover>.submenu-secretarias,
-.dropend>.submenu-secretarias:hover {
-  display: block;
-}
-
-
-.search-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background-color: #e3e7e9;
-  z-index: 1050;
-  display: flex;
-  justify-content: center;
-}
-
-.circulo:focus,
-.circulo:active {
-  background-color: #0136a8 !important;
-  color: #fff !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.circulo i {
-  color: #fff !important;
-}
-
-
-.circulo {
-  border-radius: 2rem;
-  width: 5rem;
-  height: 3.75rem;
-  background-color: #0136a8;
-  color: #ffffff;
-}
-
-.rotate-icon {
-  transition: transform 0.3s ease;
-}
-
-.rotate-icon.rotated {
-  transform: rotate(90deg);
-}
-
-
-.search-bar-desktop {
-  padding-bottom: 1rem;
-}
-
-.search-bar-desktop input::placeholder {
-  color: #6c757d;
-}
-
-.social-icon:hover i {
-  color: #0136a8 !important;
-  /* Azul Bootstrap, troque para outra cor se quiser */
-  transition: color 0.2s;
-}
-
-@media (min-width: 992px) {
   .btn-acessibilidade {
     cursor: pointer;
   }
@@ -274,19 +268,223 @@ body {
   }
 }
 
+/* ============================================================================================= */
+/* ============================== MÓDULO DASHBOARD ======================================= */
+/* ============================================================================================= */
 
+.dashboard-rounded {
+  border-radius: 18px !important;
+}
 
-/* -----------------------PARTE DAS NOTÍCIAS---------------------------- */
+.dashboard-bg-white {
+  background: #fff !important;
+}
+
+.dashboard-bg-light {
+  background: #f8f9fa !important;
+}
+
+.dashboard-bg-blue {
+  background: #0136a8 !important;
+  color: #fff !important;
+}
+
+/* === ABAS DO DASHBOARD === */
+.quick-access .nav-tabs {
+  border-radius: 1rem;
+  border: none;
+  background: transparent;
+}
+
+.quick-access .nav-tabs .nav-link {
+  border: none;
+  border-radius: 1rem;
+  color: #222;
+  background: #fff;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.quick-access .nav-tabs .nav-link.active {
+  background: #0136a8;
+  color: #fff;
+  border: none;
+}
+
+.quick-access .nav-tabs .nav-link:not(.active) {
+  color: #222;
+  background: #fff;
+}
+
+.quick-access .tab-content {
+  border-radius: 1rem;
+  background: transparent;
+  padding: 1rem;
+}
+
+/* === SCROLL HORIZONTAL NAS ABAS === */
+.tabs-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* === WIDGETS/CARDS DO DASHBOARD === */
+.tab-pane .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-pane .col-md-4 {
+  display: flex;
+}
+
+.tab-pane .col-md-4 a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 120px; /* altura mínima igual para todos */
+  text-align: center;
+}
+
+.icone-dashboard {
+  color: #0136a8;
+}
+
+.tfdash{
+  height: 100%;
+}
+
+/* === CARDS DE ACESSO RÁPIDO === */
+.quick-access-bar {
+  display: flex;
+  border-radius: 18px 18px 0 0;
+  /* igual ao dashboard, só em cima */
+  overflow: hidden;
+  background: linear-gradient(90deg, #1c819b 0%, #054de9 100%);
+  margin-bottom: 0;
+}
+
+.quick-access.dashboard-rounded {
+  border-radius: 18px !important;
+  overflow: hidden;
+}
+
+.quick-access-card {
+  flex: 1 1 0;
+  text-align: center;
+  padding: 1.5rem 0 1.2rem 0;
+  background: none;
+  border: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.quick-access-card:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.quick-access-card .quick-access-icon {
+  font-size: 50px;
+  color: #fff;
+}
+
+.quick-access-card .quick-access-title {
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.5rem;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.bg-col-wid {
+  background-color: #d0e7fa;
+}
+
+/* === RESPONSIVIDADE DO DASHBOARD === */
+/* Scroll horizontal dashboard mobile */
+@media (max-width: 991.98px) {
+  .tabs-scroll {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
+    padding-bottom: 2px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: max-content;
+  }
+
+  .tabs-scroll .nav-item {
+    flex: 0 0 auto;
+    min-width: 120px;
+    margin-right: 0.5rem;
+  }
+
+  .tabs-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Visualização mobile para quick-access-card */
+  .quick-access-card .quick-access-icon {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .quick-access-card .quick-access-title {
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .quick-access {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-access {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+/* Alinhamento lateral entre dashboard e mini notícias */
+@media (min-width: 992px) {
+  .quick-access.dashboard-rounded {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row.gy-4>.col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ============================================================================================= */
+/* ========================== MÓDULO MINI NOTÍCIAS (DASHBOARD) ============================ */
+/* ============================================================================================= */
+
+/* === CONTAINER PRINCIPAL DE MINI NOTÍCIAS === */
 .news-container {
   width: 100%;
   max-width: 600px;
   background-color: #0136a8;
   border-radius: 16px;
   color: white;
-  /* Restaura padding lateral se havia antes, ou deixa sem para seguir o padrão anterior */
 }
 
-/* ===== IMAGEM PRINCIPAL COM TEXTO SOBREPOSTO ===== */
+/* === IMAGEM PRINCIPAL COM TEXTO SOBREPOSTO === */
 .main-wrapper {
   position: relative;
   width: 100%;
@@ -294,6 +492,10 @@ body {
   overflow: hidden;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+}
+
+.main-wrapper-noticia {
+  height: 100%;
 }
 
 .main-image {
@@ -314,7 +516,7 @@ body {
   font-size: 1rem;
 }
 
-/* ===== NOTÍCIAS SECUNDÁRIAS COM TEXTO EMBAIXO ===== */
+/* === NOTÍCIAS SECUNDÁRIAS COM TEXTO EMBAIXO === */
 .bottom-images {
   display: flex;
   justify-content: space-between;
@@ -349,7 +551,8 @@ body {
   letter-spacing: 0.01em;
 }
 
-/* ######### PARTE DE NOTÍCIAS VISUALIZAÇÃO MOBILE ######## */
+/* === RESPONSIVIDADE DAS MINI NOTÍCIAS === */
+/* Mini notícias visualização mobile */
 @media (max-width: 1199.98px) {
   .news-container {
     width: 100%;
@@ -385,27 +588,14 @@ body {
   }
 }
 
-@media (max-width: 576px) {
-  .news-container {
-    width: calc(100% - 2rem);
-    /* largura total menos margens laterais */
-    margin: 1rem auto;
-    /* centraliza com espaço em cima e baixo */
-  }
-}
-
 @media (max-width: 991.98px) {
-
-  .news-container,
-  .quick-access {
+  .news-container {
     max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-
-  .news-container,
-  .quick-access {
+  .news-container {
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -417,7 +607,6 @@ body {
   .bottom-images {
     flex-direction: column;
     gap: 1rem;
-
   }
 
   .news-item {
@@ -443,207 +632,27 @@ body {
   }
 }
 
-.main-wrapper-noticia {
-  height: 100%;
-  
-}
-
-/* DASHBOARD CUSTOMIZAÇÃO */
-.dashboard-rounded {
-  border-radius: 18px !important;
-}
-
-.dashboard-bg-white {
-  background: #fff !important;
-}
-
-.dashboard-bg-light {
-  background: #f8f9fa !important;
-}
-
-.dashboard-bg-blue {
-  background: #0136a8 !important;
-  color: #fff !important;
-}
-
-/* Abas do dashboard: bordas arredondadas e cor personalizada */
-.quick-access .nav-tabs {
-  border-radius: 1rem;
-  border: none;
-  background: transparent;
-}
-
-.quick-access .nav-tabs .nav-link {
-  border: none;
-  border-radius: 1rem;
-  color: #222;
-  background: #fff;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
-}
-
-.quick-access .nav-tabs .nav-link.active {
-  background: #0136a8;
-  color: #fff;
-  border: none;
-}
-
-.quick-access .nav-tabs .nav-link:not(.active) {
-  color: #222;
-  background: #fff;
-}
-
-.quick-access .tab-content {
-  border-radius: 1rem;
-  background: transparent;
-  padding: 1rem;
-}
-
-/* Costumização das abas do dashboard */
-
-/* Scroll horizontal nas abas em telas pequenas */
-.tabs-scroll-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
-@media (max-width: 991.98px) {
-  .tabs-scroll {
-    display: flex;
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    gap: 0.5rem;
-    padding-bottom: 2px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    min-width: max-content;
-  }
-
-  .tabs-scroll .nav-item {
-    flex: 0 0 auto;
-    min-width: 120px;
-    margin-right: 0.5rem;
-  }
-
-  .tabs-scroll-wrapper::-webkit-scrollbar {
-    display: none;
+@media (max-width: 576px) {
+  .news-container {
+    width: calc(100% - 2rem);
+    /* largura total menos margens laterais */
+    margin: 1rem auto;
+    /* centraliza com espaço em cima e baixo */
   }
 }
 
-
-
-/* Widgets/cards com tamanho igual usando flex */
-.tab-pane .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.tab-pane .col-md-4 {
-  display: flex;
-}
-
-.tab-pane .col-md-4 a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  min-height: 120px; /* altura mínima igual para todos */
-  text-align: center;
-}
-
-.icone-dashboard {
-  color: #0136a8;
-
-}
-
-/* === CARDS DE ACESSO RÁPIDO (BARRA VERDE) === */
-.quick-access-bar {
-  display: flex;
-  border-radius: 18px 18px 0 0;
-  /* igual ao dashboard, só em cima */
-  overflow: hidden;
-  background: linear-gradient(90deg, #1c819b 0%, #054de9 100%);
-  margin-bottom: 0;
-}
-
-.quick-access.dashboard-rounded {
-  border-radius: 18px !important;
-  overflow: hidden;
-}
-
-.quick-access-card {
-  flex: 1 1 0;
-  text-align: center;
-  padding: 1.5rem 0 1.2rem 0;
-  background: none;
-  border: none;
-  transition: background 0.2s;
-  cursor: pointer;
-}
-
-
-
-.quick-access-card:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.quick-access-card .quick-access-icon {
-  font-size: 50px;
-  color: #fff;
-}
-
-.quick-access-card .quick-access-title {
-  font-weight: 700;
-  color: #fff;
-  margin-top: 0.5rem;
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-/* Visualização mobile para quick-access-card */
-@media (max-width: 991.98px) {
-  
-.quick-access-card .quick-access-icon {
-  font-size: 30px;
-  color: #fff;
-}
-
-.quick-access-card .quick-access-title {
-  font-weight: 700;
-  color: #fff;
-  margin-top: 0.5rem;
-  font-size: 12px;
-  line-height: 1.2;
-}
-
-}
-
-
-
-
-/* Alinhamento lateral entre dashboard e notícias */
+/* Alinhamento lateral entre dashboard e mini notícias */
 @media (min-width: 992px) {
-
-  .news-container,
-  .quick-access.dashboard-rounded {
+  .news-container {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
-
-  .row.gy-4>.col-lg-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
-/* Alinhamento lateral entre dashboard e notícias */
+/* ============================================================================================= */
+/* =============================== SEÇÃO DE NOTÍCIAS =================================== */
+/* ============================================================================================= */
 
 .noticias-section-bg {
   background: #f5f7fa;
@@ -656,15 +665,21 @@ body {
   margin-right: -50vw;
 }
 
-.card-img-top {
-  width: 100%;
-  height: 300px;
+.noticias-section-bg h1 {
+  border-left: none; /* barra azul */
+  padding-left: 0.5rem;
+  font-weight: bold;
+  border-bottom: 4px solid #0d6efd;
+  text-align: center;
+  width: 73%;
 }
 
+/* === ESTILOS PARA NOTÍCIAS INDIVIDUAIS === */
 .news-title-overlay {
   color: white;
   font-weight: 800;
   font-size: 20px;
+  align-items: center;
 }
 
 .news-adjust {
@@ -673,8 +688,9 @@ body {
 
 /* Estilos para notícias menores */
 .news-thumb {
-  width: 577px;
-  height: 70px;
+  max-width: 100px;
+  max-height: 100px;
+  min-height: 99px;
   object-fit: cover;
 }
 
@@ -691,8 +707,125 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.whi-size{
-  width: 70%;
+
+.news-category {
+  position: absolute;
+  bottom: 6.60rem;
+  right: 0.1rem;
+  background: rgba(1, 54, 168, 0.9);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+  width: 110px;
+  height: 26px;
+  text-align: center;
+  overflow: hidden; /* Esconde texto que exceder */
+  text-overflow: ellipsis; /* Adiciona reticências */
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 26ch;
 }
 
 
+
+/* Garantir que o container das notícias tenha position relative */
+.news-item-individual {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  position: relative; /* Necessário para o posicionamento absoluto da categoria */
+}
+
+.whi-size{
+  width: 74%;
+}
+
+.card-img-top {
+  width: 37rem;
+  height: 17rem;
+}
+
+.news-hight{
+  font-family: "Playwrite HU", cursive;
+}
+
+.small {
+  font-size: 1.3rem;
+  padding-top: 15px;
+}
+
+.fw-medium {
+  font-weight: 800 !important;
+}
+
+/* === RESPONSIVIDADE DA SEÇÃO DE NOTÍCIAS === */
+@media (max-width: 576px) {
+  .card-img-top {
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+  }
+
+  .sm-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .news-adjust {
+    width: 88%;
+  }
+
+  .whi-size {
+    width: 88%;
+  }
+
+  .jus-text-center {
+   align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+  }
+}
+
+@media (max-width: 576px) {
+.noticias-section-bg h1 {
+    border-left: none; /* barra azul */
+  padding-left: 0.5rem;
+  font-weight: bold;
+  border-bottom: 4px solid #0d6efd;
+  text-align: center;
+  width: 88%;
+
+}
+}
+
+@media (max-width: 576px) {
+.news-category {
+  position: absolute;
+  top: 0rem;
+  right: 0.1rem;
+  background: rgba(1, 54, 168, 0.9);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+  width: 110px;
+  height: 26px;
+  text-align: center;
+  overflow: hidden; /* Esconde texto que exceder */
+  text-overflow: ellipsis; /* Adiciona reticências */
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 26ch;
+}
+
+}
