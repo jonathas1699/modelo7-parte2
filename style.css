@@ -10,13 +10,14 @@ body {
 }
 
 /* Sobrescreve a largura máxima dos containers do Bootstrap */
-.container, 
-.container-lg, 
-.container-md, 
-.container-sm, 
-.container-xl, 
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
 .container-xxl {
-    max-width: 1250px; /* ou o valor que você preferir */
+  max-width: 1250px;
+  /* ou o valor que você preferir */
 }
 
 /* ============================================================================================= */
@@ -346,7 +347,8 @@ body {
   justify-content: center;
   align-items: center;
   flex: 1;
-  min-height: 120px; /* altura mínima igual para todos */
+  min-height: 120px;
+  /* altura mínima igual para todos */
   text-align: center;
 }
 
@@ -354,7 +356,7 @@ body {
   color: #0136a8;
 }
 
-.tfdash{
+.tfdash {
   height: 100%;
 }
 
@@ -470,6 +472,8 @@ body {
     align-items: center;
   }
 }
+
+
 
 /* ============================================================================================= */
 /* ========================== MÓDULO MINI NOTÍCIAS (DASHBOARD) ============================ */
@@ -654,6 +658,13 @@ body {
 /* =============================== SEÇÃO DE NOTÍCIAS =================================== */
 /* ============================================================================================= */
 
+
+.col-lg-8 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+
 .noticias-section-bg {
   background: #f5f7fa;
   /* Ou a cor desejada */
@@ -666,12 +677,13 @@ body {
 }
 
 .noticias-section-bg h1 {
-  border-left: none; /* barra azul */
+  border-left: none;
+  /* barra azul */
   padding-left: 0.5rem;
   font-weight: bold;
   border-bottom: 4px solid #0d6efd;
   text-align: center;
-  width: 73%;
+  width: 98%;
 }
 
 /* === ESTILOS PARA NOTÍCIAS INDIVIDUAIS === */
@@ -683,12 +695,13 @@ body {
 }
 
 .news-adjust {
-  width: 70%;
+  width: 90%;
 }
 
 /* Estilos para notícias menores */
 .news-thumb {
-  max-width: 100px;
+  min-width: 149px;
+  max-width: 150px;
   max-height: 100px;
   min-height: 99px;
   object-fit: cover;
@@ -700,7 +713,8 @@ body {
   border-radius: 0.75rem;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;;
+  transition: box-shadow 0.3s ease;
+  ;
 }
 
 .news-item-individual:hover {
@@ -710,8 +724,8 @@ body {
 
 .news-category {
   position: absolute;
-  bottom: 6.60rem;
-  right: 0.1rem;
+  top: 0rem;
+  right: 0rem;
   background: rgba(1, 54, 168, 0.9);
   color: white;
   padding: 0.25rem 0.5rem;
@@ -722,13 +736,21 @@ body {
   width: 110px;
   height: 26px;
   text-align: center;
-  overflow: hidden; /* Esconde texto que exceder */
-  text-overflow: ellipsis; /* Adiciona reticências */
+  overflow: hidden;
+  /* Esconde texto que exceder */
+  text-overflow: ellipsis;
+  /* Adiciona reticências */
   white-space: nowrap;
   overflow: hidden;
   max-width: 26ch;
 }
 
+
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-top: 6.7rem;
+}
 
 
 /* Garantir que o container das notícias tenha position relative */
@@ -738,11 +760,12 @@ body {
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease;
-  position: relative; /* Necessário para o posicionamento absoluto da categoria */
+  position: relative;
+  /* Necessário para o posicionamento absoluto da categoria */
 }
 
-.whi-size{
-  width: 74%;
+.whi-size {
+  width: 98%;
 }
 
 .card-img-top {
@@ -750,7 +773,7 @@ body {
   height: 17rem;
 }
 
-.news-hight{
+.news-hight {
   font-family: "Playwrite HU", cursive;
 }
 
@@ -763,7 +786,79 @@ body {
   font-weight: 800 !important;
 }
 
+/* Efeito hover no texto das notícias */
+.news-item-individual h3 {
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.news-item-individual:hover h3 {
+  color: #0136a8;
+  /* Muda a cor do texto para azul */
+  transform: scale(1.02);
+  /* Leve aumento de escala */
+}
+
+/* Ou se quiser um efeito mais sutil */
+.news-item-individual h3:hover {
+  color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.banner {
+  width: 267px;
+  height: 95px;
+}
+
 /* === RESPONSIVIDADE DA SEÇÃO DE NOTÍCIAS === */
+/* Correção para telas médias (tablets e laptops pequenos) - Entre 1188px e 576px */
+@media (max-width: 1188px) and (min-width: 577px) {
+  
+  
+  .col-lg-8 {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .news-adjust {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .whi-size {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+  }
+  
+  .banner {
+    height: 85px;
+    
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .col-lg-8 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+}
+
+
 @media (max-width: 576px) {
   .card-img-top {
     width: 100%;
@@ -779,53 +874,62 @@ body {
   }
 
   .news-adjust {
-    width: 88%;
+    width: 103%;
   }
 
   .whi-size {
-    width: 88%;
+    width: 104%;
   }
 
   .jus-text-center {
-   align-items: center;
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: .86rem;
     color: #333;
   }
 }
 
 @media (max-width: 576px) {
-.noticias-section-bg h1 {
-    border-left: none; /* barra azul */
-  padding-left: 0.5rem;
-  font-weight: bold;
-  border-bottom: 4px solid #0d6efd;
-  text-align: center;
-  width: 88%;
+  .noticias-section-bg h1 {
+    border-left: none;
+    /* barra azul */
+    padding-left: 0.5rem;
+    font-weight: bold;
+    border-bottom: 4px solid #0d6efd;
+    text-align: center;
+    width: 100%;
 
-}
+  }
 }
 
 @media (max-width: 576px) {
-.news-category {
-  position: absolute;
-  top: 0rem;
-  right: 0.1rem;
-  background: rgba(1, 54, 168, 0.9);
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 15px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  z-index: 2;
-  width: 110px;
-  height: 26px;
-  text-align: center;
-  overflow: hidden; /* Esconde texto que exceder */
-  text-overflow: ellipsis; /* Adiciona reticências */
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 26ch;
+  .news-category {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background: rgba(1, 54, 168, 0.9);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 2;
+    width: 110px;
+    height: 26px;
+    text-align: center;
+    overflow: hidden;
+    /* Esconde texto que exceder */
+    text-overflow: ellipsis;
+    /* Adiciona reticências */
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 26ch;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 100%;
 }
 
 }
