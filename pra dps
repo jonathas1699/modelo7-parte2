@@ -1,0 +1,16 @@
+ <div class="buttons-dash-low">
+        <button class="btn btn-primary">História de Goiânia</button>
+        <button class="btn btn-primary">Bibliotecas</button>
+        <button class="btn btn-primary">Centros Culturais</button>
+        <button class="btn btn-primary">Feiras</button>
+        <button class="btn btn-primary">Mercados Municipais</button>
+        <button class="btn btn-primary">Museus</button>
+        <button class="btn btn-primary">Parques e Bosques</button>
+        <button class="btn btn-primary">Teatros</button>
+        <button class="btn btn-primary">Agenda do Prefeito</button>
+        <button class="btn btn-primary">Galeria de Ex-prefeitos</button>
+        <button class="btn btn-primary">Telefones de Emergência</button>
+        <button class="btn btn-primary">Distâncias</button>
+        <button class="btn btn-primary">Mais +</button>
+      </div>
+    </div>

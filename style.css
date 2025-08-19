@@ -482,7 +482,7 @@ body {
 /* === CONTAINER PRINCIPAL DE MINI NOTÍCIAS === */
 .my-4 {
     margin-top: 1.5rem !important;
-    
+    margin-bottom: 0 !important;
 }
 
 .news-container {
@@ -945,9 +945,7 @@ body {
 }
 
 
-/* === CSS DA TELA DO DASHBOARD INFERIOR === */
-/* Remover espaçamento entre seções */
-/* === CSS DA TELA DO DASHBOARD INFERIOR === */
+/* === CSS DA TELA DO MENU INFERIOR === */
 .dash-low {
   background: 
   linear-gradient(rgba(1,54,168,0.7), rgba(1,54,168,0.7)),
@@ -955,12 +953,40 @@ body {
   color: #f5f7fa;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Opcional: efeito parallax */
-  width: 100vw; /* Largura total da viewport */
+  background-attachment: fixed;
+  width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  padding: 50px 20px;
+  padding: 150px 20px; /* Padding ainda maior */
+  min-height: 80vh; /* Altura de uma tela inteira */
+}
+
+.text-section-dl {
+  max-width: 380px;
+  
+}
+
+
+.text-section-dl h6 {
+  /* Seus estilos aqui */
+  letter-spacing: 0.01rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.text-section-dl h1 {
+  /* Seus estilos aqui */
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.mxx-height {
+  max-height: 228px;
+}
+
+.pc{
+  padding-top: 0.60rem;
 }
